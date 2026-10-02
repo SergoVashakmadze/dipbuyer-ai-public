@@ -6,6 +6,7 @@
 
 Every decision DipBuyer AI makes is hashed, and a whole run is anchored on **Monad testnet** as **one Merkle root**; any single decision is then provable against that root with a short inclusion proof, checked by anyone without trusting us.
 
+- **Judges:** [`JUDGES.md`](./JUDGES.md) is a five-minute, read-only way to verify everything below.
 - **Try it:** https://dipbuyer.ai/verify/monad. It hashes a decision in your browser, replays its proof, and asks the registry contract on chain. DipBuyer's servers are not contacted. The example batch is a real backtest of 53,384 decisions anchored in one transaction.
 - **Contract:** `DecisionRegistry` at `0x9444ad8eaa2b17fc725827ab4cc8a73725dd7121` (Monad testnet, chain 10143), source verified on Sourcify. Code, 23 Foundry tests and notes: [`packages/chain-monad`](./packages/chain-monad).
 - **Gasless anchoring:** batch roots are sent as ERC-4337 UserOperations with gas sponsored by Alchemy's Gas Manager, so the anchoring account holds no MON. Verified end to end; see the package README.
