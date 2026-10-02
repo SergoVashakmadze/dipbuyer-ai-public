@@ -1,0 +1,16 @@
+type Batch {
+  id: ID!            # the Merkle root
+  root: String!
+  configHash: String!
+  decisionCount: Int!
+  anchoredBy: String!
+  anchoredAt: Int!   # unix seconds, from the contract
+  blockNumber: Int!
+  txHash: String!
+}
+
+type Anchorer {
+  id: ID!            # account address
+  allowed: Boolean!
+  updatedAtBlock: Int!
+}

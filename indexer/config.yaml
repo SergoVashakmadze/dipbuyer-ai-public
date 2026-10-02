@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: dipbuyer-decision-registry
+description: Indexes DecisionRegistry batch anchors and anchorer changes on Monad testnet
+ecosystem: evm
+
+contracts:
+  - name: DecisionRegistry
+    events:
+      - event: "BatchAnchored(bytes32 indexed root, bytes32 indexed configHash, uint32 decisionCount, address indexed anchoredBy, uint64 anchoredAt)"
+      - event: "AnchorerSet(address indexed account, bool allowed)"
+
+chains:
+  - id: 10143
+    start_block: 63403513
+    contracts:
+      - name: DecisionRegistry
+        address: "0x9444ad8eaa2b17fc725827ab4cc8a73725dd7121"
+
+field_selection:
+  transaction_fields:
+    - hash
+
+address_format: lowercase

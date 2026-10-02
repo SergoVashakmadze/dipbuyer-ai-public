@@ -43,6 +43,31 @@ interface Result {
   error?: string;
 }
 
+/**
+ * Envio HyperIndex over the registry's BatchAnchored events (repo: dipbuyer-indexer). It lists every
+ * batch ever anchored, which a public RPC cannot (eth_getLogs is capped at ~100 blocks). A Development
+ * deployment URL changes when the indexer is redeployed, so it is overridable at build time; if it is
+ * down the page falls back to the committed list alone. The chain still decides what each root contains.
+ */
+const INDEXER_URL = process.env.NEXT_PUBLIC_MONAD_INDEXER_URL ?? "https://indexer.dev.hyperindex.xyz/89b4a5e/v1/graphql";
+
+/** Batch roots the indexer knows about, newest first, or null if it cannot be reached. */
+async function listFromIndexer(): Promise<{ root: Hex; txHash: Hex; anchoredAt: number }[] | null> {
+  try {
+    const res = await fetch(INDEXER_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ query: "{ Batch(order_by:{anchoredAt:desc}) { id txHash anchoredAt } }" }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) return null;
+    const rows = ((await res.json()) as { data?: { Batch?: { id: Hex; txHash: Hex; anchoredAt: number }[] } }).data?.Batch;
+    return rows ? rows.map((b) => ({ root: b.id, txHash: b.txHash, anchoredAt: b.anchoredAt })) : null;
+  } catch {
+    return null;
+  }
+}
+
 const HASH = /^0x[0-9a-fA-F]{64}$/;
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/;
 const explorer = monadTestnet.blockExplorers?.default.url;
@@ -55,6 +80,7 @@ export default function VerifyMonadPage() {
   const [chain, setChain] = useState<Record<string, ChainState>>({});
   const [selected, setSelected] = useState<Batch | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [indexed, setIndexed] = useState<number | null>(null);
   const [decisionJson, setDecisionJson] = useState("");
   const [proofJson, setProofJson] = useState("");
   const [root, setRoot] = useState("");
@@ -76,9 +102,18 @@ export default function VerifyMonadPage() {
   useEffect(() => {
     fetch("/monad-batches.json")
       .then((r) => (r.ok ? (r.json() as Promise<BatchFile>) : Promise.reject(new Error(`HTTP ${r.status}`))))
-      .then((f) => {
+      .then(async (manifest) => {
+        // Batches the indexer lists that the committed file does not carry samples for are still shown
+        // (checkable by pasting a decision and proof); the committed file supplies the sample decisions.
+        const indexedBatches = await listFromIndexer();
+        setIndexed(indexedBatches ? indexedBatches.length : null);
+        const known = new Set(manifest.batches.map((b) => b.root.toLowerCase()));
+        const extra: Batch[] = (indexedBatches ?? [])
+          .filter((b) => !known.has(b.root.toLowerCase()))
+          .map((b) => ({ root: b.root, txHash: b.txHash, label: `Anchored ${new Date(b.anchoredAt * 1000).toISOString().slice(0, 10)} (no sample decisions listed)`, samples: [] }));
+        const f: BatchFile = { ...manifest, batches: [...manifest.batches, ...extra] };
         setFile(f);
-        const first = f.batches[0];
+        const first = f.batches.find((b) => b.samples.length > 0);
         if (first?.samples[0]) pick(f, first, first.samples[0]);
 
         // The list says which batches exist; the chain says whether they do, and what is in them.
@@ -176,7 +211,10 @@ export default function VerifyMonadPage() {
           <h2 style={{ marginBottom: 8 }}>Anchored batches</h2>
           <p className="muted" style={{ lineHeight: 1.6, marginTop: 0 }}>
             Each row is read from the registry on Monad testnet when this page loads. The list only names the
-            batches; their status, size and date come from the chain.
+            batches; their status, size and date come from the chain.{" "}
+            {indexed !== null
+              ? `The batch list is indexed by Envio HyperIndex (${indexed} batches found).`
+              : "The Envio indexer could not be reached, so only the committed list is shown."}
           </p>
           {file.batches.map((b) => {
             const c = chain[b.root] ?? { status: "checking" as const };

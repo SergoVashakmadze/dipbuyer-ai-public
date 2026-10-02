@@ -1,0 +1,18 @@
+{
+  "name": "dipbuyer-indexer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Envio HyperIndex indexer for the DecisionRegistry on Monad testnet",
+  "scripts": {
+    "codegen": "envio codegen",
+    "dev": "envio dev",
+    "start": "envio start"
+  },
+  "dependencies": {
+    "envio": "3.12.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

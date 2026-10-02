@@ -45,6 +45,10 @@
   ],
   "registrations": [
     {
+      "agentId": 1978,
+      "agentRegistry": "eip155:10143:0x8004A818BFB912233c491871b3d84c89A494BD9e"
+    },
+    {
       "agentId": 2,
       "agentRegistry": "eip155:10143:0x6ce06a82cdf76367a3a112893c724fe5a738c6bf"
     }

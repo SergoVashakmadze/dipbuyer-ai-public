@@ -1,0 +1,32 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "DipBuyer AI",
+  "description": "A value-investing agent whose verdicts come from deterministic, versioned rules rather than a language model. Every decision is hashed into a Merkle batch anchored on Monad, so any single verdict can be proved against the chain without trusting the agent.",
+  "image": "https://dipbuyer.ai/images/dipbuyer-logo.webp",
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://dipbuyer.ai/agent-card.json",
+      "version": "0.3.0"
+    },
+    {
+      "name": "web",
+      "endpoint": "https://dipbuyer.ai/verify/monad"
+    }
+  ],
+  "x402Support": false,
+  "active": true,
+  "supportedTrust": [
+    "crypto-economic"
+  ],
+  "provenance": {
+    "decisionRegistry": "eip155:10143:0x9444ad8eaa2b17fc725827ab4cc8a73725dd7121",
+    "verifier": "https://dipbuyer.ai/verify/monad"
+  },
+  "registrations": [
+    {
+      "agentId": 1978,
+      "agentRegistry": "eip155:10143:0x8004A818BFB912233c491871b3d84c89A494BD9e"
+    }
+  ]
+}

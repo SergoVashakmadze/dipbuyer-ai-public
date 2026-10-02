@@ -1,0 +1,9 @@
+{
+  "name": "dipbuyer-cre-anchor",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": { "@chainlink/cre-sdk": "1.23.0" },
+  "devDependencies": { "typescript": "5.9.3" }
+}

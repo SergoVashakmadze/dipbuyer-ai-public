@@ -1,0 +1,9 @@
+{
+  "schedule": "0 0 6 * * *",
+  "apiBaseUrl": "https://api.dipbuyer.ai/api",
+  "symbols": ["AAPL", "MSFT", "KO", "JNJ", "XOM"],
+  "configLabel": "strategy.lynch.json@v0.4.2",
+  "chainName": "monad-testnet",
+  "receiver": "0x79cf4f8c9dcafe4cfe21c85c494acd5e4d0c9ab6",
+  "gasLimit": "400000"
+}
