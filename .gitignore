@@ -1,0 +1,34 @@
+node_modules/
+dist/
+.next/
+.turbo/
+coverage/
+*.log
+.env
+.env.local
+.env.*.local
+# any .env variant (backups, per-env copies) — but keep the committed template
+.env.*
+!.env.example
+.DS_Store
+.vercel
+.wrangler/
+*.tsbuildinfo
+
+# AlgoKit dispenser venv
+.venv-algokit/
+
+# x402 testnet payer keypair (generated; holds a testnet key — never commit)
+.payer-*.json
+.receiver-*.json
+railway-env.txt
+
+# Copyrighted paper PDFs kept locally for reference — cite/link them (research brief §1.11), never redistribute via the repo
+/*.pdf
+packages/chain-monad/dist/
+packages/chain-monad/out/
+packages/chain-monad/cache/
+apps/api/.data/
+
+# Cloudflare (OpenNext) build output
+.open-next/

@@ -1,0 +1,19 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# Security floors for transitive dependencies (Dependabot alerts, 2026-09-19). Each selector only
+# lifts versions below the patched release, within the same major. Drop an entry once the
+# upstream package that pins it ships the fix on its own.
+overrides:
+  "fast-uri@>=3.0.0 <3.1.6": "^3.1.6"
+  "multer@<2.3.0": "^2.3.0"
+  "nanoid@<3.3.18": "^3.3.18"
+  "postcss@<8.5.23": "^8.5.23"
+  "ws@>=8.0.0 <8.21.0": "^8.21.0"
+  "hono@<4.13.5": "^4.13.5"
+  "@hono/node-server@<1.19.15": "^1.19.15"
+  "body-parser@<1.20.6": "^1.20.6"
+  "qs@<6.16.0": "^6.16.0"
+  "file-type@<21.3.2": "^21.3.2"
+  "sharp@<0.35.4": "^0.35.4"

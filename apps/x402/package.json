@@ -1,0 +1,35 @@
+{
+  "name": "@dipbuyer/x402",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "gen-keys": "tsx src/gen-keys.ts",
+    "build": "echo 'x402: runtime app (tsx)' && exit 0",
+    "typecheck": "echo 'x402: skip (external x402-avm types)' && exit 0",
+    "lint": "echo 'lint: x402'",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dipbuyer/shared": "workspace:*",
+    "@dipbuyer/strategy": "workspace:*",
+    "@dipbuyer/data": "workspace:*",
+    "@dipbuyer/agent": "workspace:*",
+    "@dipbuyer/chain": "workspace:*",
+    "@hono/node-server": "^1.13.7",
+    "hono": "^4.6.14",
+    "@x402-avm/avm": "latest",
+    "@x402-avm/core": "latest",
+    "@x402-avm/extensions": "^2.6.1",
+    "@x402-avm/hono": "latest",
+    "@noble/ed25519": "^2.1.0",
+    "@noble/hashes": "^1.6.1",
+    "algosdk": "^3.1.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

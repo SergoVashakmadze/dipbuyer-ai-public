@@ -1,0 +1,1100 @@
+{
+  "generated": "2026-09-16T13:33:20.646Z",
+  "source": "polygon ticker details (date = last day in S&P 500)",
+  "overrides": {
+    "ABC": {
+      "cik": "1140859",
+      "name": "AmerisourceBergen Corp.",
+      "asOf": "2023-08-29",
+      "secEntity": "CENCORA, INC.",
+      "evidence": "NetIncomeLoss 2021-09-30 filed 2021-11-23",
+      "via": "polygon"
+    },
+    "ABMD": {
+      "cik": "815094",
+      "name": "Abiomed Inc",
+      "asOf": "2022-12-21",
+      "secEntity": "ABIOMED INC",
+      "evidence": "NetIncomeLoss 2020-12-31 filed 2021-05-21",
+      "via": "polygon"
+    },
+    "ADS": {
+      "cik": "1101215",
+      "name": "Alliance Data Systems Corporation",
+      "asOf": "2020-06-21",
+      "secEntity": "BREAD FINANCIAL HOLDINGS, INC.",
+      "evidence": "NetIncomeLoss 2018-06-30 filed 2020-02-28",
+      "via": "polygon"
+    },
+    "ALXN": {
+      "cik": "1347178",
+      "name": "Alexion Pharmaceuticals Inc",
+      "asOf": "2021-07-20",
+      "secEntity": "VANDA PHARMACEUTICALS INC.",
+      "evidence": "NetIncomeLoss 2019-06-30 filed 2020-02-26",
+      "via": "polygon"
+    },
+    "ANDV": {
+      "cik": "50104",
+      "name": "Andeavor",
+      "asOf": "2018-09-30",
+      "secEntity": "ANDEAVOR",
+      "evidence": "NetIncomeLoss 2016-09-30 filed 2017-02-21",
+      "via": "polygon"
+    },
+    "ANSS": {
+      "cik": "1013462",
+      "name": "Ansys Inc",
+      "asOf": "2025-07-17",
+      "secEntity": "ANSYS, Inc.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-21",
+      "via": "polygon"
+    },
+    "ANTM": {
+      "cik": "1156039",
+      "name": "ANTHEM, INC.",
+      "asOf": "2022-06-27",
+      "secEntity": "ELEVANCE HEALTH, INC.",
+      "evidence": "NetIncomeLoss 2020-06-30 filed 2021-02-18",
+      "via": "polygon"
+    },
+    "ARG": {
+      "cik": "804212",
+      "name": "AIRGAS INC",
+      "asOf": "2016-05-22",
+      "secEntity": "AIRGAS INC",
+      "evidence": "NetIncomeLoss 2014-03-31 filed 2014-05-29",
+      "via": "polygon"
+    },
+    "AVB": {
+      "cik": "915912",
+      "name": "AvalonBay Communities, Inc.",
+      "asOf": "2025-12-31",
+      "secEntity": "AVALONBAY COMMUNITIES, INC.",
+      "evidence": "ProfitLoss 2023-12-31 filed 2024-02-23",
+      "via": "polygon"
+    },
+    "BBBY": {
+      "cik": "886158",
+      "name": "Bed Bath & Beyond Inc",
+      "asOf": "2017-07-25",
+      "secEntity": "20230930-DK-BUTTERFLY-1, INC.",
+      "evidence": "EarningsPerShareDiluted 2015-05-30 filed 2016-04-26",
+      "via": "polygon"
+    },
+    "BHGE": {
+      "cik": "1701605",
+      "name": "Baker Hughes, a GE company Class A Common Stock",
+      "asOf": "2019-10-17",
+      "secEntity": "Baker Hughes Company",
+      "evidence": "NetIncomeLoss 2017-09-30 filed 2018-02-23",
+      "via": "polygon"
+    },
+    "BK": {
+      "cik": "1390777",
+      "name": "Bank of New York Mellon Corporation",
+      "asOf": "2025-12-31",
+      "secEntity": "Bank of New York Mellon Corp",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-28",
+      "via": "polygon"
+    },
+    "BLL": {
+      "cik": "9389",
+      "name": "Ball Corporation",
+      "asOf": "2022-05-09",
+      "secEntity": "BALL CORPORATION",
+      "evidence": "ProfitLoss 2020-12-31 filed 2021-02-17",
+      "via": "polygon"
+    },
+    "BRCM": {
+      "cik": "1054374",
+      "name": "BROADCOM CORP CL-A",
+      "asOf": "2016-01-31",
+      "secEntity": "BROADCOM CORP",
+      "evidence": "NetIncomeLoss 2013-12-31 filed 2014-01-30",
+      "via": "polygon"
+    },
+    "BXLT": {
+      "cik": "1620546",
+      "name": "BAXALTA INC COM STK (DE)",
+      "asOf": "2016-06-02",
+      "secEntity": "Baxalta Inc",
+      "evidence": "NetIncomeLoss 2014-03-31 filed 2016-03-03",
+      "via": "polygon"
+    },
+    "CA": {
+      "cik": "356028",
+      "name": "CA, Inc.",
+      "asOf": "2018-11-05",
+      "secEntity": "CA, INC.",
+      "evidence": "NetIncomeLoss 2017-03-31 filed 2017-05-12",
+      "via": "polygon"
+    },
+    "CAM": {
+      "cik": "941548",
+      "name": "CAMERON INTERNATIONAL CORPORATION",
+      "asOf": "2016-04-03",
+      "secEntity": "CAMERON INTERNATIONAL CORP",
+      "evidence": "NetIncomeLoss 2014-03-31 filed 2015-02-20",
+      "via": "polygon"
+    },
+    "CBS": {
+      "cik": "813828",
+      "name": "CBS Corporation Class B",
+      "asOf": "2019-12-04",
+      "secEntity": "Paramount Skydance Corp",
+      "evidence": "NetIncomeLoss 2017-09-30 filed 2018-02-20",
+      "via": "polygon"
+    },
+    "CDAY": {
+      "cik": "1725057",
+      "name": "Ceridian HCM Holding",
+      "asOf": "2024-01-31",
+      "secEntity": "Dayforce, Inc.",
+      "evidence": "NetIncomeLoss 2021-12-31 filed 2022-02-28",
+      "via": "polygon"
+    },
+    "CELG": {
+      "cik": "816284",
+      "name": "Celgene Corp",
+      "asOf": "2019-11-20",
+      "secEntity": "CELGENE CORPORATION",
+      "evidence": "NetIncomeLoss 2017-09-30 filed 2018-02-07",
+      "via": "polygon"
+    },
+    "CERN": {
+      "cik": "804753",
+      "name": "Cerner Corp",
+      "asOf": "2022-06-07",
+      "secEntity": "CERNER Corp",
+      "evidence": "NetIncomeLoss 2020-03-31 filed 2021-02-19",
+      "via": "polygon"
+    },
+    "CMA": {
+      "cik": "28412",
+      "name": "Comerica Incorporated",
+      "asOf": "2024-06-23",
+      "secEntity": "COMERICA INC",
+      "evidence": "ProfitLoss 2022-12-31 filed 2023-02-14",
+      "via": "polygon"
+    },
+    "COG": {
+      "cik": "858470",
+      "name": "Cabot Oil & Gas Corp.",
+      "asOf": "2021-10-03",
+      "secEntity": "COTERRA ENERGY INC.",
+      "evidence": "Revenues 2019-09-30 filed 2021-02-26",
+      "via": "polygon"
+    },
+    "COL": {
+      "cik": "1137411",
+      "name": "Rockwell Collins",
+      "asOf": "2018-11-26",
+      "secEntity": "ROCKWELL COLLINS INC",
+      "evidence": "ProfitLoss 2016-09-30 filed 2016-11-15",
+      "via": "polygon"
+    },
+    "CPGX": {
+      "cik": "1629995",
+      "name": "COLUMBIA PIPELINE GROUP IN COM STK  (DE)",
+      "asOf": "2016-06-30",
+      "secEntity": "COLUMBIA PIPELINE GROUP, INC./DE",
+      "evidence": "NetIncomeLoss 2014-06-30 filed 2016-02-18",
+      "via": "polygon"
+    },
+    "CSRA": {
+      "cik": "1646383",
+      "name": "CSRA Inc.",
+      "asOf": "2018-04-03",
+      "secEntity": "CSRA INC.",
+      "evidence": "NetIncomeLoss 2016-04-01 filed 2016-05-27",
+      "via": "polygon"
+    },
+    "CTL": {
+      "cik": "18926",
+      "name": "CenturyLink, Inc.",
+      "asOf": "2020-09-17",
+      "secEntity": "LUMEN TECHNOLOGIES, INC.",
+      "evidence": "NetIncomeLoss 2018-09-30 filed 2019-03-11",
+      "via": "polygon"
+    },
+    "CTRA": {
+      "cik": "858470",
+      "name": "Coterra Energy Inc.",
+      "asOf": "2025-12-31",
+      "secEntity": "COTERRA ENERGY INC.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-23",
+      "via": "polygon"
+    },
+    "CTXS": {
+      "cik": "877890",
+      "name": "Citrix Systems Inc",
+      "asOf": "2022-10-02",
+      "secEntity": "CITRIX SYSTEMS INC",
+      "evidence": "NetIncomeLoss 2020-09-30 filed 2021-02-08",
+      "via": "polygon"
+    },
+    "DAY": {
+      "cik": "1725057",
+      "name": "Dayforce, Inc.",
+      "asOf": "2025-12-31",
+      "secEntity": "Dayforce, Inc.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-28",
+      "via": "polygon"
+    },
+    "DFS": {
+      "cik": "1393612",
+      "name": "Discover Financial Services",
+      "asOf": "2025-05-18",
+      "secEntity": "DISCOVER FINANCIAL SERVICES",
+      "evidence": "NetIncomeLoss 2023-03-31 filed 2024-12-23",
+      "via": "polygon"
+    },
+    "DISH": {
+      "cik": "1001082",
+      "name": "DISH Network Corp.",
+      "asOf": "2023-06-19",
+      "secEntity": "DISH Network Corp",
+      "evidence": "ProfitLoss 2021-06-30 filed 2022-02-24",
+      "via": "polygon"
+    },
+    "DNB": {
+      "cik": "1115222",
+      "name": "Dun & Bradstreet",
+      "asOf": "2017-04-04",
+      "secEntity": "DUN & BRADSTREET CORP/NW",
+      "evidence": "NetIncomeLoss 2015-03-31 filed 2016-02-26",
+      "via": "polygon"
+    },
+    "DO": {
+      "cik": "949039",
+      "name": "DIAMOND OFFSHORE DRILLING INC",
+      "asOf": "2016-10-02",
+      "secEntity": "Diamond Offshore Drilling, Inc.",
+      "evidence": "NetIncomeLoss 2014-09-30 filed 2015-02-23",
+      "via": "polygon"
+    },
+    "DRE": {
+      "cik": "783280",
+      "name": "Duke Realty Corp.",
+      "asOf": "2022-10-02",
+      "secEntity": "DUKE REALTY CORPORATION",
+      "evidence": "ProfitLoss 2020-12-31 filed 2021-02-19",
+      "via": "polygon"
+    },
+    "DWDP": {
+      "cik": "1666700",
+      "name": "DowDuPont Inc.",
+      "asOf": "2019-06-02",
+      "secEntity": "DUPONT DE NEMOURS, INC.",
+      "evidence": "NetIncomeLoss 2017-03-31 filed 2018-02-15",
+      "via": "polygon"
+    },
+    "EA": {
+      "cik": "712515",
+      "name": "Electronic Arts Inc",
+      "asOf": "2025-12-31",
+      "secEntity": "ELECTRONIC ARTS INC.",
+      "evidence": "NetIncomeLoss 2024-03-31 filed 2024-05-22",
+      "via": "polygon"
+    },
+    "EMC": {
+      "cik": "1124610",
+      "name": "EMC CORPORATION",
+      "asOf": "2016-09-06",
+      "secEntity": "VMWARE LLC",
+      "evidence": "NetIncomeLoss 2014-06-30 filed 2015-02-26",
+      "via": "polygon"
+    },
+    "ENDP": {
+      "cik": "1593034",
+      "name": "Endo International plc",
+      "asOf": "2017-03-01",
+      "secEntity": "Endo International plc",
+      "evidence": "NetIncomeLoss 2014-12-31 filed 2015-03-02",
+      "via": "polygon"
+    },
+    "EQR": {
+      "cik": "906107",
+      "name": "Equity Residential",
+      "asOf": "2025-12-31",
+      "secEntity": "Vivmark Residential",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-15",
+      "via": "polygon"
+    },
+    "ESRX": {
+      "cik": "1532063",
+      "name": "Express Scripts Holding Company",
+      "asOf": "2018-12-20",
+      "secEntity": "Express Scripts Holding Co.",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-02-14",
+      "via": "polygon"
+    },
+    "ESV": {
+      "cik": "314808",
+      "name": "ENSCO INTERNATIONAL PLC,LONDON",
+      "asOf": "2016-03-29",
+      "secEntity": "Valaris Limited",
+      "evidence": "NetIncomeLoss 2014-03-31 filed 2015-03-02",
+      "via": "polygon"
+    },
+    "EVHC": {
+      "cik": "1678531",
+      "name": "Envision Healthcare Holdings Inc",
+      "asOf": "2018-10-10",
+      "secEntity": "Envision Healthcare Corporation",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-03-01",
+      "via": "polygon"
+    },
+    "FB": {
+      "cik": "1326801",
+      "name": "Meta Platforms, Inc. Class A Common Stock",
+      "asOf": "2022-06-08",
+      "secEntity": "Meta Platforms, Inc.",
+      "evidence": "NetIncomeLoss 2020-12-31 filed 2021-01-28",
+      "via": "polygon"
+    },
+    "FI": {
+      "cik": "798354",
+      "name": "Fiserv, Inc.",
+      "asOf": "2025-11-10",
+      "secEntity": "FISERV, INC.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-22",
+      "via": "polygon"
+    },
+    "FL": {
+      "cik": "850209",
+      "name": "Foot Locker Inc",
+      "asOf": "2019-08-08",
+      "secEntity": "Foot Locker, Inc.",
+      "evidence": "NetIncomeLoss 2017-07-29 filed 2018-03-29",
+      "via": "polygon"
+    },
+    "FLIR": {
+      "cik": "354908",
+      "name": "FLIR Systems, Inc. (DE) Common Stock",
+      "asOf": "2021-05-13",
+      "secEntity": "FLIR SYSTEMS INC",
+      "evidence": "NetIncomeLoss 2019-03-31 filed 2020-02-27",
+      "via": "polygon"
+    },
+    "FLT": {
+      "cik": "1175454",
+      "name": "FleetCor Technologies, Inc.",
+      "asOf": "2024-03-24",
+      "secEntity": "Corpay, Inc",
+      "evidence": "NetIncomeLoss 2022-12-31 filed 2023-02-28",
+      "via": "polygon"
+    },
+    "FTR": {
+      "cik": "20520",
+      "name": "Frontier Communications Corp.",
+      "asOf": "2017-03-19",
+      "secEntity": "Frontier Communications Parent, Inc.",
+      "evidence": "Revenues 2015-03-31 filed 2016-02-25",
+      "via": "polygon"
+    },
+    "GAS": {
+      "cik": "1004155",
+      "name": "AGL RESOURCES INC (HOLDING CO)",
+      "asOf": "2016-06-30",
+      "secEntity": "The Southern Company",
+      "evidence": "NetIncomeLoss 2014-06-30 filed 2015-02-12",
+      "via": "polygon"
+    },
+    "GGP": {
+      "cik": "1496048",
+      "name": "GGP Inc.",
+      "asOf": "2018-08-27",
+      "secEntity": "Brookfield Property REIT Inc.",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-02-22",
+      "via": "polygon"
+    },
+    "GMCR": {
+      "cik": "909954",
+      "name": "KEURIG GREEN MTN INC",
+      "asOf": "2016-03-02",
+      "secEntity": "KEURIG GREEN MOUNTAIN, INC.",
+      "evidence": "ProfitLoss 2014-09-27 filed 2014-11-19",
+      "via": "polygon"
+    },
+    "GPS": {
+      "cik": "39911",
+      "name": "The Gap, Inc.",
+      "asOf": "2022-02-01",
+      "secEntity": "GAP, INC",
+      "evidence": "NetIncomeLoss 2020-02-01 filed 2020-03-17",
+      "via": "polygon"
+    },
+    "HAR": {
+      "cik": "800459",
+      "name": "Harman International Industries",
+      "asOf": "2017-03-12",
+      "secEntity": "HARMAN INTERNATIONAL INDUSTRIES INC /DE/",
+      "evidence": "NetIncomeLoss 2014-12-31 filed 2015-08-07",
+      "via": "polygon"
+    },
+    "HBI": {
+      "cik": "1359841",
+      "name": "Hanesbrands, Inc.",
+      "asOf": "2021-12-19",
+      "secEntity": "Hanesbrands Inc.",
+      "evidence": "NetIncomeLoss 2019-12-28 filed 2020-02-11",
+      "via": "polygon"
+    },
+    "HCP": {
+      "cik": "765880",
+      "name": "HCP, INC.",
+      "asOf": "2019-11-04",
+      "secEntity": "Healthpeak Properties, Inc.",
+      "evidence": "NetIncomeLoss 2017-09-30 filed 2018-02-13",
+      "via": "polygon"
+    },
+    "HFC": {
+      "cik": "48039",
+      "name": "HOLLYFRONTIER CORP",
+      "asOf": "2021-06-03",
+      "secEntity": "HOLLYFRONTIER CORP",
+      "evidence": "NetIncomeLoss 2019-03-31 filed 2020-02-20",
+      "via": "polygon"
+    },
+    "HOLX": {
+      "cik": "859737",
+      "name": "Hologic Inc",
+      "asOf": "2025-12-31",
+      "secEntity": "HOLOGIC INC",
+      "evidence": "NetIncomeLoss 2024-09-28 filed 2024-11-27",
+      "via": "polygon"
+    },
+    "HOT": {
+      "cik": "316206",
+      "name": "STARWOOD HOTELS & RESORTS WORLDWIDE, INC.",
+      "asOf": "2016-09-22",
+      "secEntity": "STARWOOD HOTEL & RESORTS WORLDWIDE, INC",
+      "evidence": "NetIncomeLoss 2014-09-30 filed 2015-02-25",
+      "via": "polygon"
+    },
+    "IPG": {
+      "cik": "51644",
+      "name": "The Interpublic Group of Companies, Inc.",
+      "asOf": "2025-11-27",
+      "secEntity": "INTERPUBLIC GROUP OF COMPANIES, INC.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-20",
+      "via": "polygon"
+    },
+    "JEC": {
+      "cik": "52988",
+      "name": "Jacobs Engineering Group",
+      "asOf": "2019-12-09",
+      "secEntity": "JACOBS SOLUTIONS INC.",
+      "evidence": "NetIncomeLoss 2017-09-29 filed 2017-11-21",
+      "via": "polygon"
+    },
+    "JWN": {
+      "cik": "72333",
+      "name": "Nordstrom, Inc.",
+      "asOf": "2020-06-21",
+      "secEntity": "Nordstrom, Inc.",
+      "evidence": "NetIncomeLoss 2018-05-05 filed 2019-03-18",
+      "via": "polygon"
+    },
+    "K": {
+      "cik": "55067",
+      "name": "Kellanova",
+      "asOf": "2025-12-10",
+      "secEntity": "Kellanova",
+      "evidence": "NetIncomeLoss 2023-09-30 filed 2024-02-20",
+      "via": "polygon"
+    },
+    "KORS": {
+      "cik": "1530721",
+      "name": "Michael Kors Holding Lmtd",
+      "asOf": "2018-09-18",
+      "secEntity": "CAPRI HOLDINGS LIMITED",
+      "evidence": "NetIncomeLoss 2016-10-01 filed 2017-05-31",
+      "via": "polygon"
+    },
+    "KSU": {
+      "cik": "54480",
+      "name": "Kansas City Southern",
+      "asOf": "2021-12-13",
+      "secEntity": "KANSAS CITY SOUTHERN",
+      "evidence": "NetIncomeLoss 2019-12-31 filed 2020-01-24",
+      "via": "polygon"
+    },
+    "LEG": {
+      "cik": "58492",
+      "name": "Leggett & Platt, Inc.",
+      "asOf": "2021-12-19",
+      "secEntity": "LEGGETT & PLATT INC",
+      "evidence": "NetIncomeLoss 2019-12-31 filed 2020-02-20",
+      "via": "polygon"
+    },
+    "LLL": {
+      "cik": "1039101",
+      "name": "L3 Technologies, Inc.",
+      "asOf": "2019-06-30",
+      "secEntity": "L3 TECHNOLOGIES, INC.",
+      "evidence": "NetIncomeLoss 2017-06-30 filed 2018-02-22",
+      "via": "polygon"
+    },
+    "LLTC": {
+      "cik": "791907",
+      "name": "Linear Technology Corp",
+      "asOf": "2017-03-12",
+      "secEntity": "LINEAR TECHNOLOGY CORP /CA/",
+      "evidence": "NetIncomeLoss 2015-03-29 filed 2015-08-19",
+      "via": "polygon"
+    },
+    "LM": {
+      "cik": "704051",
+      "name": "Legg Mason",
+      "asOf": "2016-12-01",
+      "secEntity": "LEGG MASON, INC.",
+      "evidence": "Revenues 2015-03-31 filed 2016-05-23",
+      "via": "polygon"
+    },
+    "LVLT": {
+      "cik": "746515",
+      "name": "Level 3 Communications Inc",
+      "asOf": "2017-10-12",
+      "secEntity": "EXPEDITORS INTERNATIONAL OF WASHINGTON, INC.",
+      "evidence": "NetIncomeLoss 2015-09-30 filed 2016-02-25",
+      "via": "polygon"
+    },
+    "MJN": {
+      "cik": "1452575",
+      "name": "Mead Johnson Nutrition Company",
+      "asOf": "2017-06-14",
+      "secEntity": "Mead Johnson Nutrition Co",
+      "evidence": "NetIncomeLoss 2015-06-30 filed 2016-02-17",
+      "via": "polygon"
+    },
+    "MMC": {
+      "cik": "62709",
+      "name": "Marsh & McLennan Companies, Inc.",
+      "asOf": "2025-12-31",
+      "secEntity": "Marsh & McLennan Companies, Inc.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-12",
+      "via": "polygon"
+    },
+    "MNK": {
+      "cik": "1567892",
+      "name": "MALLINCKRODT plc",
+      "asOf": "2017-07-25",
+      "secEntity": "Keenova Therapeutics plc",
+      "evidence": "NetIncomeLoss 2015-06-26 filed 2015-11-24",
+      "via": "polygon"
+    },
+    "MON": {
+      "cik": "1110783",
+      "name": "Monsanto Co",
+      "asOf": "2018-06-06",
+      "secEntity": "MONSANTO CO /NEW/",
+      "evidence": "NetIncomeLoss 2016-05-31 filed 2016-10-19",
+      "via": "polygon"
+    },
+    "MYL": {
+      "cik": "1623613",
+      "name": "Mylan N.V. Ordinary Shares",
+      "asOf": "2020-11-16",
+      "secEntity": "MYLAN II B.V.",
+      "evidence": "ProfitLoss 2018-12-31 filed 2019-02-27",
+      "via": "polygon"
+    },
+    "NFX": {
+      "cik": "912750",
+      "name": "Newfield Exploration",
+      "asOf": "2019-02-14",
+      "secEntity": "NEWFIELD EXPLORATION CO /DE/",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-02-21",
+      "via": "polygon"
+    },
+    "NLOK": {
+      "cik": "849399",
+      "name": "NortonLifeLock Inc. Common Stock",
+      "asOf": "2022-11-07",
+      "secEntity": "Gen Digital Inc.",
+      "evidence": "NetIncomeLoss 2021-04-02 filed 2021-05-21",
+      "via": "polygon"
+    },
+    "NLSN": {
+      "cik": "1492633",
+      "name": "Nielsen Holdings plc",
+      "asOf": "2022-10-11",
+      "secEntity": "Nielsen Holdings plc",
+      "evidence": "NetIncomeLoss 2020-09-30 filed 2021-02-25",
+      "via": "polygon"
+    },
+    "PBCT": {
+      "cik": "1378946",
+      "name": "People's United Financial Inc",
+      "asOf": "2022-04-03",
+      "secEntity": "People's United Financial, Inc.",
+      "evidence": "NetIncomeLoss 2020-03-31 filed 2021-03-01",
+      "via": "polygon"
+    },
+    "PCL": {
+      "cik": "849213",
+      "name": "PLUM CREEK TIMBER CO (REIT)",
+      "asOf": "2016-02-21",
+      "secEntity": "PLUM CREEK TIMBER CO INC",
+      "evidence": "NetIncomeLoss 2013-12-31 filed 2014-02-28",
+      "via": "polygon"
+    },
+    "PCP": {
+      "cik": "79958",
+      "name": "PRECISION CASTPARTS CORP",
+      "asOf": "2016-01-31",
+      "secEntity": "PRECISION CASTPARTS CORP",
+      "evidence": "NetIncomeLoss 2013-12-29 filed 2014-05-29",
+      "via": "polygon"
+    },
+    "PDCO": {
+      "cik": "891024",
+      "name": "Patterson Companies, Inc.",
+      "asOf": "2018-03-18",
+      "secEntity": "PATTERSON COMPANIES, INC.",
+      "evidence": "NetIncomeLoss 2016-01-30 filed 2016-06-29",
+      "via": "polygon"
+    },
+    "PEAK": {
+      "cik": "765880",
+      "name": "Healthpeak Properties, Inc.",
+      "asOf": "2024-03-03",
+      "secEntity": "Healthpeak Properties, Inc.",
+      "evidence": "NetIncomeLoss 2021-12-31 filed 2022-02-09",
+      "via": "polygon"
+    },
+    "PKI": {
+      "cik": "31791",
+      "name": "PerkinElmer, Inc.",
+      "asOf": "2023-05-15",
+      "secEntity": "REVVITY, INC",
+      "evidence": "NetIncomeLoss 2021-04-04 filed 2023-03-01",
+      "via": "polygon"
+    },
+    "PX": {
+      "cik": "884905",
+      "name": "Praxair Inc",
+      "asOf": "2018-10-30",
+      "secEntity": "PRAXAIR INC",
+      "evidence": "NetIncomeLoss 2016-09-30 filed 2017-03-01",
+      "via": "polygon"
+    },
+    "RAI": {
+      "cik": "1275283",
+      "name": "Reynolds American Inc",
+      "asOf": "2017-07-24",
+      "secEntity": "REYNOLDS AMERICAN INC",
+      "evidence": "NetIncomeLoss 2015-06-30 filed 2016-02-11",
+      "via": "polygon"
+    },
+    "RE": {
+      "cik": "1095073",
+      "name": "Everest Re Group, Ltd.",
+      "asOf": "2023-07-09",
+      "secEntity": "EVEREST GROUP, LTD.",
+      "evidence": "ProfitLoss 2021-12-31 filed 2022-02-28",
+      "via": "polygon"
+    },
+    "SCG": {
+      "cik": "754737",
+      "name": "Scana",
+      "asOf": "2019-01-01",
+      "secEntity": "SCANA CORP",
+      "evidence": "Revenues 2016-12-31 filed 2017-02-24",
+      "via": "polygon"
+    },
+    "SEE": {
+      "cik": "1012100",
+      "name": "Sealed Air Corp.",
+      "asOf": "2023-12-17",
+      "secEntity": "SEALED AIR CORP/DE",
+      "evidence": "NetIncomeLoss 2021-12-31 filed 2022-02-22",
+      "via": "polygon"
+    },
+    "SIVB": {
+      "cik": "719739",
+      "name": "SVB Financial Group",
+      "asOf": "2023-03-14",
+      "secEntity": "SVB Financial Group",
+      "evidence": "ProfitLoss 2020-12-31 filed 2021-03-01",
+      "via": "polygon"
+    },
+    "SNI": {
+      "cik": "924168",
+      "name": "Scripps Networks Interactive, Inc Common Class A",
+      "asOf": "2018-03-06",
+      "secEntity": "ENERGY FOCUS, INC/DE",
+      "evidence": "NetIncomeLoss 2015-12-31 filed 2016-03-10",
+      "via": "polygon"
+    },
+    "SPLS": {
+      "cik": "791519",
+      "name": "Staples Inc",
+      "asOf": "2017-09-12",
+      "secEntity": "STAPLES INC",
+      "evidence": "NetIncomeLoss 2016-01-30 filed 2017-03-09",
+      "via": "polygon"
+    },
+    "SRCL": {
+      "cik": "861878",
+      "name": "Stericycle Inc",
+      "asOf": "2018-12-02",
+      "secEntity": "Stericycle, Inc.",
+      "evidence": "NetIncomeLoss 2016-09-30 filed 2017-03-15",
+      "via": "polygon"
+    },
+    "STJ": {
+      "cik": "203077",
+      "name": "St Jude Medical",
+      "asOf": "2017-01-04",
+      "secEntity": "ST JUDE MEDICAL INC",
+      "evidence": "NetIncomeLoss 2015-01-03 filed 2015-02-26",
+      "via": "polygon"
+    },
+    "SWN": {
+      "cik": "7332",
+      "name": "Southwestern Energy",
+      "asOf": "2017-04-03",
+      "secEntity": "SOUTHWESTERN ENERGY COMPANY",
+      "evidence": "NetIncomeLoss 2015-12-31 filed 2016-02-26",
+      "via": "polygon"
+    },
+    "TGNA": {
+      "cik": "39899",
+      "name": "TEGNA Inc.",
+      "asOf": "2017-06-01",
+      "secEntity": "TEGNA INC.",
+      "evidence": "NetIncomeLoss 2015-12-31 filed 2016-02-29",
+      "via": "polygon"
+    },
+    "TIF": {
+      "cik": "98246",
+      "name": "Tiffany & Co.",
+      "asOf": "2021-01-06",
+      "secEntity": "TIFFANY & CO",
+      "evidence": "NetIncomeLoss 2018-10-31 filed 2019-03-22",
+      "via": "polygon"
+    },
+    "TMK": {
+      "cik": "320335",
+      "name": "Torchmark",
+      "asOf": "2019-08-07",
+      "secEntity": "GLOBE LIFE INC.",
+      "evidence": "NetIncomeLoss 2017-06-30 filed 2018-02-27",
+      "via": "polygon"
+    },
+    "TWC": {
+      "cik": "1377013",
+      "name": "TIME WARNER CABLE INC NEW COM STK",
+      "asOf": "2016-05-17",
+      "secEntity": "TIME WARNER CABLE INC.",
+      "evidence": "NetIncomeLoss 2014-12-31 filed 2015-02-13",
+      "via": "polygon"
+    },
+    "TWX": {
+      "cik": "1105705",
+      "name": "Time Warner Inc",
+      "asOf": "2018-06-14",
+      "secEntity": "TIME WARNER INC.",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-02-23",
+      "via": "polygon"
+    },
+    "UTX": {
+      "cik": "101829",
+      "name": "United Technologies Corporation",
+      "asOf": "2020-04-02",
+      "secEntity": "RTX CORPORATION",
+      "evidence": "NetIncomeLoss 2018-03-31 filed 2019-02-07",
+      "via": "polygon"
+    },
+    "VIAB": {
+      "cik": "1339947",
+      "name": "Viacom Inc. Class B",
+      "asOf": "2019-12-04",
+      "secEntity": "VIACOM INC.",
+      "evidence": "NetIncomeLoss 2017-09-30 filed 2017-11-16",
+      "via": "polygon"
+    },
+    "VIAC": {
+      "cik": "813828",
+      "name": "ViacomCBS Inc. Class B Common Stock",
+      "asOf": "2022-02-16",
+      "secEntity": "Paramount Skydance Corp",
+      "evidence": "NetIncomeLoss 2019-12-31 filed 2020-02-20",
+      "via": "polygon"
+    },
+    "WBA": {
+      "cik": "1618921",
+      "name": "Walgreens Boots Alliance, Inc",
+      "asOf": "2025-08-27",
+      "secEntity": "WALGREENS BOOTS ALLIANCE, INC.",
+      "evidence": "NetIncomeLoss 2023-08-31 filed 2023-10-12",
+      "via": "polygon"
+    },
+    "WFM": {
+      "cik": "865436",
+      "name": "Whole Foods Market Inc",
+      "asOf": "2017-08-27",
+      "secEntity": "WHOLE FOODS MARKET INC",
+      "evidence": "NetIncomeLoss 2015-07-05 filed 2015-11-13",
+      "via": "polygon"
+    },
+    "WLTW": {
+      "cik": "1140536",
+      "name": "Willis Towers Watson Public Limited Company Ordinary Shares",
+      "asOf": "2022-01-09",
+      "secEntity": "WILLIS TOWERS WATSON PLC",
+      "evidence": "NetIncomeLoss 2019-12-31 filed 2020-02-26",
+      "via": "polygon"
+    },
+    "WRK": {
+      "cik": "1732845",
+      "name": "WestRock Company",
+      "asOf": "2024-07-07",
+      "secEntity": "WestRock Company",
+      "evidence": "NetIncomeLoss 2022-09-30 filed 2022-11-18",
+      "via": "polygon"
+    },
+    "XEC": {
+      "cik": "1168054",
+      "name": "CIMAREX ENERGY CO",
+      "asOf": "2020-03-02",
+      "secEntity": "CIMAREX ENERGY CO.",
+      "evidence": "NetIncomeLoss 2017-12-31 filed 2018-02-23",
+      "via": "polygon"
+    },
+    "XL": {
+      "cik": "875159",
+      "name": "XL Group Ltd.",
+      "asOf": "2018-09-11",
+      "secEntity": "XL GROUP LTD",
+      "evidence": "NetIncomeLoss 2016-12-31 filed 2017-02-23",
+      "via": "polygon"
+    },
+    "XLNX": {
+      "cik": "743988",
+      "name": "Xilinx Inc",
+      "asOf": "2022-02-14",
+      "secEntity": "XILINX, INC.",
+      "evidence": "NetIncomeLoss 2019-12-28 filed 2020-05-08",
+      "via": "polygon"
+    },
+    "AGN": {
+      "cik": "1578845",
+      "name": "Allergan plc",
+      "asOf": "2020-05-11",
+      "secEntity": "ALLERGAN PLC",
+      "evidence": "NetIncomeLoss 2018-12-31 filed 2019-02-15",
+      "via": "name-search"
+    },
+    "ATVI": {
+      "cik": "718877",
+      "name": "Activision Blizzard  Inc",
+      "asOf": "2023-10-17",
+      "secEntity": "ACTIVISION BLIZZARD, INC.",
+      "evidence": "NetIncomeLoss 2021-12-31 filed 2022-02-25",
+      "via": "name-search"
+    },
+    "CTLT": {
+      "cik": "1596783",
+      "name": "CATALENT  INC",
+      "asOf": "2024-12-22",
+      "secEntity": "CATALENT, INC.",
+      "evidence": "NetIncomeLoss 2023-06-30 filed 2023-12-08",
+      "via": "name-search"
+    },
+    "CXO": {
+      "cik": "1358071",
+      "name": "CONCHO RESOURCES INC",
+      "asOf": "2021-01-20",
+      "secEntity": "CONCHO RESOURCES INC",
+      "evidence": "NetIncomeLoss 2018-12-31 filed 2019-02-20",
+      "via": "name-search"
+    },
+    "ETFC": {
+      "cik": "1015780",
+      "name": "E*TRADE Financial Corporation",
+      "asOf": "2020-10-06",
+      "secEntity": "E TRADE FINANCIAL CORP",
+      "evidence": "NetIncomeLoss 2018-09-30 filed 2019-02-20",
+      "via": "name-search"
+    },
+    "JNPR": {
+      "cik": "1043604",
+      "name": "Juniper Networks Inc",
+      "asOf": "2025-07-08",
+      "secEntity": "JUNIPER NETWORKS, INC.",
+      "evidence": "NetIncomeLoss 2023-12-31 filed 2024-02-07",
+      "via": "name-search"
+    },
+    "MRO": {
+      "cik": "101778",
+      "name": "Marathon Oil Corporation",
+      "asOf": "2024-11-25",
+      "secEntity": "Marathon Oil Corporation",
+      "evidence": "NetIncomeLoss 2022-12-31 filed 2023-02-16",
+      "via": "name-search"
+    },
+    "MXIM": {
+      "cik": "743316",
+      "name": "Maxim Integrated Products  Inc",
+      "asOf": "2021-08-29",
+      "secEntity": "MAXIM INTEGRATED PRODUCTS, INC.",
+      "evidence": "NetIncomeLoss 2019-06-29 filed 2019-08-21",
+      "via": "name-search"
+    },
+    "NBL": {
+      "cik": "72207",
+      "name": "Noble Energy Inc",
+      "asOf": "2020-10-11",
+      "secEntity": "NOBLE ENERGY INC",
+      "evidence": "NetIncomeLoss 2018-12-31 filed 2019-02-19",
+      "via": "name-search"
+    },
+    "PXD": {
+      "cik": "1038357",
+      "name": "Pioneer Natural Resource Co",
+      "asOf": "2024-05-07",
+      "secEntity": "PIONEER NATURAL RESOURCES CO",
+      "evidence": "NetIncomeLoss 2022-12-31 filed 2023-02-23",
+      "via": "name-search"
+    },
+    "TWTR": {
+      "cik": "1418091",
+      "name": "Twitter  Inc",
+      "asOf": "2022-10-31",
+      "secEntity": "Twitter, Inc.",
+      "evidence": "NetIncomeLoss 2020-12-31 filed 2021-02-17",
+      "via": "name-search"
+    },
+    "VAR": {
+      "cik": "203527",
+      "name": "Varian Medical Systems  Inc",
+      "asOf": "2021-04-19",
+      "secEntity": "VARIAN MEDICAL SYSTEMS INC",
+      "evidence": "NetIncomeLoss 2019-03-29 filed 2019-11-25",
+      "via": "name-search"
+    },
+    "WCG": {
+      "cik": "1279363",
+      "name": "Wellcare Health Plans  Inc",
+      "asOf": "2020-01-27",
+      "secEntity": "WELLCARE HEALTH PLANS, INC.",
+      "evidence": "NetIncomeLoss 2017-12-31 filed 2018-02-16",
+      "via": "name-search"
+    },
+    "AET": {
+      "cik": "1122304",
+      "name": "Aetna Inc",
+      "asOf": "2018-11-28",
+      "secEntity": "AETNA INC /PA/",
+      "evidence": "NetIncomeLoss 2016-09-30 filed 2017-02-17",
+      "via": "name-search"
+    },
+    "RTN": {
+      "cik": "1047122",
+      "name": "Raytheon Company",
+      "asOf": "2020-04-05",
+      "secEntity": "RAYTHEON CO/",
+      "evidence": "NetIncomeLoss 2018-04-01 filed 2019-02-13",
+      "via": "name-search"
+    }
+  },
+  "unresolved": {
+    "AABA": {
+      "asOf": "2017-06-18",
+      "status": 404,
+      "reason": "no name to search"
+    },
+    "FBHS": {
+      "asOf": "2022-12-18",
+      "status": 404,
+      "reason": "no name to search"
+    },
+    "FRC": {
+      "asOf": "2023-05-03",
+      "status": 404,
+      "reason": "no name to search"
+    },
+    "HES": {
+      "asOf": "2025-07-22",
+      "name": "Hess Corporation",
+      "reason": "ambiguous: 1789832 Hess Midstream LP; 4447 HESS CORPORATION"
+    },
+    "INFO": {
+      "asOf": "2022-03-01",
+      "name": "Harbor PanAgora Dynamic Large Cap Core ETF",
+      "reason": "no candidate filed a 10-K before 2022-03-01"
+    },
+    "RHT": {
+      "asOf": "2019-07-14",
+      "status": 404,
+      "reason": "no name to search"
+    },
+    "TSS": {
+      "asOf": "2019-09-22",
+      "status": 404,
+      "reason": "no name to search"
+    },
+    "WYND": {
+      "asOf": "2018-05-30",
+      "name": "Wyndham Destinations  Inc",
+      "reason": "no candidate filed a 10-K before 2018-05-30"
+    },
+    "ARNC": {
+      "asOf": "2020-04-05",
+      "name": "Arconic Corporation",
+      "reason": "no candidate filed a 10-K before 2020-04-05"
+    },
+    "BCR": {
+      "asOf": "2017-12-28",
+      "name": "CR Bard Inc",
+      "reason": "no candidate filed a 10-K before 2017-12-28"
+    },
+    "CCE": {
+      "asOf": "2016-05-30",
+      "name": "COCA-COLA ENTERPRISES INC NEW COM STK",
+      "reason": "no candidate filed a 10-K before 2016-05-30"
+    },
+    "CHK": {
+      "asOf": "2018-03-18",
+      "name": "Chesapeake Energy Corporation",
+      "reason": "no candidate filed a 10-K before 2018-03-18"
+    },
+    "CVC": {
+      "asOf": "2016-06-20",
+      "name": "CABLEVISION SYS CP NY GRP CL-A",
+      "reason": "no candidate filed a 10-K before 2016-06-20"
+    },
+    "DISCA": {
+      "asOf": "2022-04-10",
+      "name": "Discovery  Inc  Series A",
+      "reason": "no candidate filed a 10-K before 2022-04-10"
+    },
+    "DISCK": {
+      "asOf": "2022-04-10",
+      "name": "Discovery  Inc  Series C",
+      "reason": "no candidate filed a 10-K before 2022-04-10"
+    },
+    "HRS": {
+      "asOf": "2019-05-31",
+      "name": "Harris",
+      "reason": "no candidate filed a 10-K before 2019-05-31"
+    },
+    "SBNY": {
+      "asOf": "2023-03-14",
+      "name": "SIGNATURE BK NEW YORK N Y",
+      "reason": "no candidate filed a 10-K before 2023-03-14"
+    },
+    "SYMC": {
+      "asOf": "2019-11-04",
+      "name": "Symantec Corp",
+      "reason": "no candidate filed a 10-K before 2019-11-04"
+    }
+  },
+  "validated": "2026-09-16T13:44:50.368Z",
+  "validation": "each CIK filed a 10-K for a period ending within ~2.2 years before the ticker's last day in the index, filed by that day"
+}

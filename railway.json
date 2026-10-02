@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pnpm install --frozen-lockfile && pnpm exec turbo run build --filter=@dipbuyer/x402..."
+  },
+  "deploy": {
+    "startCommand": "pnpm --filter @dipbuyer/x402 start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10,
+    "healthcheckPath": "/health"
+  }
+}

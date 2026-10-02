@@ -1,0 +1,18 @@
+{
+  "name": "@dipbuyer/verifier",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "node --experimental-strip-types src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'lint: verifier'",
+    "test": "echo 'no tests yet'"
+  },
+  "dependencies": {
+    "@dipbuyer/shared": "workspace:*",
+    "@dipbuyer/chain": "workspace:*"
+  }
+}

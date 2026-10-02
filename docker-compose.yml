@@ -1,0 +1,43 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: dipbuyer
+      POSTGRES_PASSWORD: dipbuyer
+      POSTGRES_DB: dipbuyer
+    ports:
+      - "5433:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://dipbuyer:dipbuyer@db:5432/dipbuyer
+      REDIS_URL: redis://redis:6379
+      RUNTIME_MODE: ${RUNTIME_MODE:-RESEARCH_ONLY}
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+      - redis
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  dbdata:

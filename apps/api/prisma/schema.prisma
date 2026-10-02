@@ -1,0 +1,171 @@
+// DipBuyer AI — Postgres schema (the engineering design notes). System of record for accounts, suitability,
+// portfolios, orders, and the IMMUTABLE decision/audit trail. pgvector is added in a later
+// migration for filings/news semantic search. Records in DecisionRecord/AuditEvent are
+// append-only (enforce immutability with a DB trigger in migration; SYSC 5–7yr retention).
+//
+// Status: schema target / not yet wired into the running app (still on InMemoryDecisionStore).
+// Next: `prisma generate` + a PrismaDecisionStore implementing @dipbuyer/agent DecisionStore.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RuntimeMode {
+  RESEARCH_ONLY
+  ADVISORY
+  DISCRETIONARY
+}
+
+enum Execution {
+  PAPER
+  LIVE
+}
+
+enum KycStatus {
+  PENDING
+  VALID
+  REJECTED
+}
+
+enum Verdict {
+  buy
+  hold
+  trim
+  sell
+  avoid
+  abstain
+}
+
+model Tenant {
+  id        String   @id @default(cuid())
+  name      String
+  config    Json     @default("{}") // branding, universe, disclaimers, mode, jurisdiction
+  createdAt DateTime @default(now())
+  users     User[]
+  decisions DecisionRecord[]
+}
+
+model User {
+  id          String       @id @default(cuid())
+  tenantId    String?
+  tenant      Tenant?      @relation(fields: [tenantId], references: [id])
+  email       String       @unique
+  auth0Sub    String?      @unique
+  role        String       @default("investor") // investor | advisor | fund | partner-admin | ops
+  kycStatus   KycStatus    @default(PENDING)
+  kybStatus   KycStatus    @default(PENDING)
+  createdAt   DateTime     @default(now())
+  suitability Suitability?
+  portfolios  Portfolio[]
+  decisions   DecisionRecord[]
+}
+
+// COBS 9A/10A — immutable evidence of the suitability assessment gating ADVISORY/DISCRETIONARY.
+model Suitability {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id])
+  objectives      Json
+  riskTolerance   String
+  capacityForLoss String
+  knowledgeExp    Json
+  exclusions      String[]
+  assessedAt      DateTime @default(now())
+}
+
+model Portfolio {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
+  cash      Decimal    @default(0) @db.Decimal(18, 4)
+  createdAt DateTime   @default(now())
+  positions Position[]
+  orders    Order[]
+}
+
+model Position {
+  id            String    @id @default(cuid())
+  portfolioId   String
+  portfolio     Portfolio @relation(fields: [portfolioId], references: [id])
+  symbol        String
+  qty           Decimal   @db.Decimal(18, 9)
+  avgEntryPrice Decimal   @db.Decimal(18, 4)
+  updatedAt     DateTime  @updatedAt
+
+  @@unique([portfolioId, symbol])
+}
+
+model Order {
+  id             String    @id @default(cuid())
+  portfolioId    String
+  portfolio      Portfolio @relation(fields: [portfolioId], references: [id])
+  symbol         String
+  side           String
+  qty            Decimal   @db.Decimal(18, 9)
+  status         String
+  idempotencyKey String    @unique // money-safety: dedup before broker submit
+  brokerOrderId  String?
+  decisionId     String?
+  createdAt      DateTime  @default(now())
+}
+
+// IMMUTABLE audit primitive (PROMPT.md §7). Append-only; optionally anchored on Algorand.
+model DecisionRecord {
+  id               String       @id @default(cuid())
+  decisionId       String       @unique
+  ts               DateTime
+  mode             RuntimeMode
+  execution        Execution
+  tenantId         String?
+  tenant           Tenant?      @relation(fields: [tenantId], references: [id])
+  userId           String?
+  user             User?        @relation(fields: [userId], references: [id])
+  symbol           String
+  lynchCategory    String?
+  convictionScore  Int
+  verdict          Verdict
+  rationale        String
+  payload          Json // full DecisionRecord (criteria, provenance, model, etc.)
+  strategyConfig   String // strategyConfigHash for reproducibility
+  createdAt        DateTime     @default(now())
+  anchor           ChainAnchor?
+
+  @@index([symbol, ts])
+}
+
+model ChainAnchor {
+  id           String         @id @default(cuid())
+  decisionId   String         @unique
+  decision     DecisionRecord @relation(fields: [decisionId], references: [decisionId])
+  hash         String
+  txid         String
+  network      String // testnet | mainnet
+  anchoredAt   DateTime       @default(now())
+}
+
+// General immutable event log (orders, funding, KYC changes, overrides). DB-trigger enforced.
+model AuditEvent {
+  id        String   @id @default(cuid())
+  actor     String
+  action    String
+  entity    String
+  entityId  String?
+  metadata  Json     @default("{}")
+  createdAt DateTime @default(now())
+
+  @@index([entity, entityId])
+}
+
+model Backtest {
+  id         String   @id @default(cuid())
+  params     Json
+  metrics    Json
+  configHash String
+  codeCommit String?
+  createdAt  DateTime @default(now())
+}

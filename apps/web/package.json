@@ -1,0 +1,33 @@
+{
+  "name": "@dipbuyer/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'lint: web'",
+    "test": "echo 'no tests yet'",
+    "cf:build": "node --env-file=production.public.env node_modules/@opennextjs/cloudflare/dist/cli/index.js build",
+    "cf:preview": "node --env-file=production.public.env node_modules/@opennextjs/cloudflare/dist/cli/index.js build && node --env-file=production.public.env node_modules/@opennextjs/cloudflare/dist/cli/index.js preview",
+    "cf:deploy": "node --env-file=production.public.env node_modules/@opennextjs/cloudflare/dist/cli/index.js build && node --env-file=production.public.env node_modules/@opennextjs/cloudflare/dist/cli/index.js deploy"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
+    "@dipbuyer/chain": "workspace:*",
+    "@dipbuyer/chain-monad": "workspace:*",
+    "@dipbuyer/shared": "workspace:*",
+    "@dipbuyer/strategy": "workspace:*",
+    "next": "^15.5.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "viem": "2.53.1"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "wrangler": "^4.135.0"
+  }
+}

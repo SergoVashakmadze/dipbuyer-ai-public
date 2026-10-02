@@ -1,0 +1,265 @@
+{
+  "$schema": "./strategy.schema.json",
+  "version": "0.3.0-exp-no-cyclical-buys",
+  "changelog_0_3_0": "2026-09-16 methodology audit on live SEC EDGAR data. Engine rules, no threshold changes: (1) insufficient valuation data abstains instead of scoring 0 = avoid; (2) dividend_cover criterion now computed (weight was configured but inert); (3) PEGY undefined for non-positive EPS growth; (4) cyclical category from SEC SIC when the source gives no cyclicality; (5) cycle_position criterion computed from EPS history (weight was configured but inert); (6) EDGAR EPS growth is a multi-year CAGR, not one year.",
+  "description": "Canonical, machine-readable Peter Lynch strategy thresholds. SINGLE SOURCE OF TRUTH. PROMPT.md cites these illustratively but MUST NOT contradict them; CI fails on drift. Thresholds are research-derived (see DipBuyer-AI-Research-Brief.md \u00a71) and tagged by provenance: 'lynch_book' (Lynch's own numbers) vs 'impl_default' (canonical encoded screens e.g. Validea/AAII).",
+  "conventions": {
+    "peg_convention": "lower_is_better",
+    "peg_note": "PEG = PE / EPS_growth_pct_whole_number. PEGY = PE / (EPS_growth_pct + dividend_yield_pct). NEVER mix with the reciprocal (growth+yield)/PE form.",
+    "growth_units": "whole_number_percent"
+  },
+  "understandability_gate": {
+    "require_business_summary": true,
+    "require_growth_story": true,
+    "max_complexity_flag": "moderate"
+  },
+  "categories": {
+    "slow_grower": {
+      "id": {
+        "eps_growth_pct": {
+          "lte": 5
+        },
+        "min_market_cap_usd": 10000000000,
+        "min_payout_ratio": 0.4
+      },
+      "buy": {
+        "min_dividend_yield_pct": 3.0,
+        "require_dividend_well_covered": true,
+        "min_payout_cover": 1.5
+      },
+      "sell": {
+        "dividend_cut_risk": true,
+        "lost_yield_advantage": true
+      },
+      "weights": {
+        "dividend_yield": 0.35,
+        "dividend_cover": 0.25,
+        "debt_to_equity": 0.2,
+        "fcf_positive": 0.2,
+        "value_trap_guard": 0.1
+      },
+      "provenance": "impl_default"
+    },
+    "stalwart": {
+      "id": {
+        "eps_growth_pct": {
+          "gte": 10,
+          "lte": 20
+        },
+        "min_market_cap_usd": 5000000000,
+        "require_eps_consistency_years": 3
+      },
+      "buy": {
+        "peg": {
+          "lte": 1.0
+        },
+        "max_debt_to_equity": 0.5,
+        "min_roe_pct": 12
+      },
+      "sell": {
+        "gain_pct_trim": {
+          "gte": 30
+        },
+        "gain_pct_sell": {
+          "gte": 50
+        },
+        "fundamental_deterioration": true
+      },
+      "weights": {
+        "peg": 0.3,
+        "growth_consistency": 0.2,
+        "debt_to_equity": 0.2,
+        "roe": 0.15,
+        "pe_vs_5y_avg": 0.15,
+        "value_trap_guard": 0.15
+      },
+      "provenance": "lynch_book"
+    },
+    "fast_grower": {
+      "id": {
+        "eps_growth_pct": {
+          "gte": 20
+        },
+        "ideal_band_pct": [
+          20,
+          50
+        ],
+        "too_hot_above_pct": 25,
+        "exclude_above_pct": 50
+      },
+      "buy": {
+        "peg": {
+          "lte": 1.0
+        },
+        "max_debt_to_equity": 0.33,
+        "require_room_to_expand": true,
+        "large_fastgrower_max_pe": 40,
+        "large_fastgrower_min_sales_usd": 1000000000
+      },
+      "sell": {
+        "peg": {
+          "gte": 2.0
+        },
+        "growth_deceleration": true,
+        "same_store_sales_flat": true,
+        "concept_saturation": true
+      },
+      "weights": {
+        "peg": 0.3,
+        "growth_quality": 0.25,
+        "debt_to_equity": 0.2,
+        "room_to_expand": 0.15,
+        "insider_buying": 0.1,
+        "value_trap_guard": 0.1
+      },
+      "provenance": "lynch_book"
+    },
+    "cyclical": {
+      "id": {
+        "earnings_cyclicality": "high"
+      },
+      "buy": {
+        "near_cycle_trough": true,
+        "note": "P/E LOOKS high on depressed trough earnings \u2014 do NOT apply naive PEG gate",
+        "max_debt_to_equity": 0.5
+      },
+      "sell": {
+        "inventory_building": true,
+        "commodity_prices_peaking": true,
+        "capacity_being_added": true
+      },
+      "weights": {
+        "cycle_position": 0.4,
+        "inventory_trend": 0.25,
+        "debt_to_equity": 0.2,
+        "fcf_positive": 0.15
+      },
+      "provenance": "impl_default"
+    },
+    "turnaround": {
+      "id": {
+        "distressed": true
+      },
+      "buy": {
+        "require_survivable_balance_sheet": true,
+        "prefer_net_cash": true,
+        "credible_recovery_thesis": true
+      },
+      "sell": {
+        "recovery_complete": true,
+        "thesis_failed": true
+      },
+      "weights": {
+        "balance_sheet_survivability": 0.4,
+        "net_cash": 0.3,
+        "recovery_evidence": 0.3
+      },
+      "provenance": "impl_default"
+    },
+    "asset_play": {
+      "id": {
+        "hidden_asset_value": true
+      },
+      "buy": {
+        "min_asset_value_to_market_cap": 1.5,
+        "note": "Use net cash / property / holdings value, NOT earnings-based PEG; net cash = price floor"
+      },
+      "sell": {
+        "market_recognises_asset": true
+      },
+      "weights": {
+        "asset_value_ratio": 0.5,
+        "net_cash_floor": 0.3,
+        "catalyst_present": 0.2
+      },
+      "provenance": "impl_default"
+    }
+  },
+  "global_criteria": {
+    "peg": {
+      "strong_lte": 0.5,
+      "buy_lte": 1.0,
+      "fair_eq": 1.0,
+      "caution_band": [
+        1.0,
+        2.0
+      ],
+      "sell_gte": 2.0,
+      "provenance": "lynch_book"
+    },
+    "pe_vs_growth": {
+      "rule": "fair_pe_approx_eq_growth_rate",
+      "provenance": "lynch_book"
+    },
+    "pe_vs_own_5y_avg": {
+      "prefer": "lte",
+      "provenance": "impl_default"
+    },
+    "debt_to_equity": {
+      "prefer_lt": 0.33,
+      "tolerate_lt": 0.5,
+      "reject_gt": 0.8,
+      "provenance": "impl_default"
+    },
+    "growth_consistency_years": {
+      "min": 3,
+      "ideal": 5,
+      "provenance": "impl_default"
+    },
+    "inventory_red_flag": {
+      "rule": "penalise_if_inventory_growth_pct_gt_revenue_growth_pct",
+      "provenance": "lynch_book"
+    },
+    "net_cash_per_share": {
+      "treat_as_valuation_floor": true,
+      "provenance": "lynch_book"
+    },
+    "institutional_ownership": {
+      "prefer": "below_median",
+      "rationale": "Street Lag",
+      "provenance": "lynch_book"
+    },
+    "insider_activity": {
+      "buying": "bullish",
+      "selling": "noise",
+      "provenance": "lynch_book"
+    },
+    "profitability": {
+      "require_positive_fcf": true,
+      "min_roe_pct": 15,
+      "min_current_ratio": 1.0,
+      "provenance": "impl_default"
+    },
+    "value_profitability_interaction": {
+      "rule": "passing_peg_requires_positive_fcf_else_criterion_fails_and_verdict_caps_at_hold",
+      "applies_when_peg_lte": 1.0,
+      "rationale": "The value premium concentrates in PROFITABLE value. 1973-2023 CRSP/Compustat double-sorts: high-BM+high-profitability 16.27/17.13/19.44% CAGR (large/mid/small) vs market 12.12/13.47/14.32; high-BM+LOW-profitability ~market (11.92/13.07/15.02). Cheap-without-profitability is the trap cell, not a bargain. Confirmation axis is cash flow (Piotroski's CFO>0), not ROE, which is meaningless under buyback-negative equity.",
+      "provenance": "piotroski_2000_jar38 (doi:10.2307/2672906); novy_marx_2013_jfe; avantis_wahal_crsp_compustat_1973_2023"
+    }
+  },
+  "scoring": {
+    "verdict_bands": {
+      "buy_gte": 70,
+      "hold_band": [
+        40,
+        69
+      ],
+      "avoid_sell_lt": 40
+    },
+    "note": "Conviction 0-100 = weighted roll-up of the per-category checklist; MUST be reconstructible from the checklist with no opaque adjustments.",
+    "buy_excluded_categories": [
+      "cyclical"
+    ]
+  },
+  "risk_guardrails": {
+    "max_position_pct_of_portfolio": 10,
+    "max_sector_pct_of_portfolio": 30,
+    "min_cash_floor_pct": 2,
+    "min_avg_daily_volume_usd": 1000000,
+    "exclude_penny_stocks_below_usd": 1,
+    "min_holding_period_days": 30,
+    "max_positions": 40,
+    "note": "Defaults; per-tenant overrides allowed only WITHIN these bounds, never beyond."
+  },
+  "experiment": "Step 2 E2b: buys capped at hold for cyclical only. Train-half (2016-2020) attribution alone showed cyclical buys at -0.68%/month and -12.5%/12m vs SPY; slow_grower evidence was mixed."
+}

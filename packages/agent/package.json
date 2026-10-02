@@ -1,0 +1,31 @@
+{
+  "name": "@dipbuyer/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "@dipbuyer/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'lint: agent'",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dipbuyer/chain": "workspace:*",
+    "@dipbuyer/data": "workspace:*",
+    "@dipbuyer/shared": "workspace:*",
+    "@dipbuyer/strategy": "workspace:*",
+    "openai": "^6.45.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
+  }
+}

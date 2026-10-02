@@ -1,0 +1,16 @@
+# Contract tests. The deployed bytecode comes from scripts/compile.mjs (solc-js); these settings
+# match it so the tests exercise the same compilation choices.
+[profile.default]
+src = "contracts"
+test = "test"
+out = "out"
+cache_path = "cache"
+solc_version = "0.8.37"
+evm_version = "cancun"
+# Official Foundry >= 1.8 runs the Monad execution environment (gas model, size limits) with this.
+network = "monad"
+optimizer = true
+optimizer_runs = 200
+
+[fuzz]
+runs = 512

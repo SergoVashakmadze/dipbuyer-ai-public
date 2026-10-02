@@ -1,0 +1,14 @@
+{
+  "name": "@dipbuyer/bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'TODO(phase-7): telegram/whatsapp alerts bot' && exit 0",
+    "build": "echo 'noop' && exit 0",
+    "typecheck": "echo 'bot typecheck (placeholder)'",
+    "lint": "echo 'lint: bot'",
+    "test": "echo 'no tests yet'"
+  },
+  "dependencies": { "@dipbuyer/shared": "workspace:*" }
+}

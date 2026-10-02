@@ -1,0 +1,283 @@
+{
+ "network": "testnet",
+ "chainId": 10143,
+ "registry": "0x9444ad8eaa2b17fc725827ab4cc8a73725dd7121",
+ "batches": [
+  {
+   "root": "0x9b361f4620dda3d51aa6c3806928e52a981970c0740594bde912d8e5f3e6e911",
+   "txHash": "0xdb6f1f19d37f37428996492332f92eab12aec7982ac9abf8ba4bdaf1d799443f",
+   "label": "v0.4.0 backtest, 2016-2025",
+   "samples": [
+    {
+     "index": 5511,
+     "decision": {
+      "ts": "2017-01-29T00:00:00.000Z",
+      "symbol": "AEE",
+      "category": "slow_grower",
+      "verdict": "buy",
+      "convictionScore": 89,
+      "sector": "utilities",
+      "criteria": [
+       [
+        "PEGY",
+        "fail",
+        2.514
+       ],
+       [
+        "value_trap_guard",
+        "na",
+        100000000
+       ],
+       [
+        "debt_to_equity",
+        "na",
+        1.091
+       ],
+       [
+        "inventory_vs_sales",
+        "fail",
+        "2.7% vs 0.7%"
+       ],
+       [
+        "growth_consistency",
+        "fail",
+        "2/3 yrs +"
+       ],
+       [
+        "roe",
+        "fail",
+        9.1
+       ],
+       [
+        "fcf_positive",
+        "pass",
+        100000000
+       ],
+       [
+        "dividend_yield",
+        "pass",
+        3.194
+       ],
+       [
+        "dividend_cover",
+        "pass",
+        1.565
+       ]
+      ]
+     },
+     "proof": [
+      "0xce9ea2e039ec04e3db9b1da652872eedce6f28f74ee1c69bd4fcf325105166ce",
+      "0x2f43e8fe41d44f912bd5a57a2c1f813bc2eb8bce5b26c52bb14deda43f88be50",
+      "0x9c065751b29248cb84b035eca9f2c9ecf1438d86c919a519a665fc62a937bfb0",
+      "0x5b03c5151a1e771b15ed3c6d335e864b313f0c706adebee4331e6d8acead118a",
+      "0x01033b0bf905233b379905db2c22f4ec452e64fb13b49f874090fb21922b9057",
+      "0xdac2bec4ca121ca28060cec6940d370c23b17ce181c66984d337368698efa38f",
+      "0x117cd192e041761e58f239da43efe465a1b5ab0514df1664d9bd038031404e49",
+      "0x2a686255055c7e9d26050df87e85e630598630e7bb78526bd37c9a3934d97d22",
+      "0x1ea36a6e391b4ab207c8cdecec5e9fbbd310f14c0137a5ced371d0c84541c36c",
+      "0x5e4fc61836c9b421795386079ed6567dd1fc060c5ccf3d73041dc061c20e1b66",
+      "0xedfb94b5405270b1b612a046db93305f1528a25e4d2f5735ee9c92464d305c9d",
+      "0xa5286be5721b7264e538bd0032abc4c219e4eaa30783e963c28d1970e0f802b2",
+      "0xe6dbe1c8aa55fe7c94496b54c4def5520c566c04cdf3f1318ec6c00b55fed5d8",
+      "0xff4e0f59cefab1c518eb82da6b0ac76f2ffb73aed94b3975408bf39a70d8949c",
+      "0xff7664e4de757501910f120a478f71a4ccc78d0c24438804e9b99c9cd458e0da",
+      "0xc9f34994de843ae6dc7589cbfec4b6f7be501660da241b6a855e67a9ec2f5785"
+     ]
+    },
+    {
+     "index": 15743,
+     "decision": {
+      "ts": "2019-01-19T00:00:00.000Z",
+      "symbol": "AAL",
+      "category": "cyclical",
+      "verdict": "avoid",
+      "convictionScore": 0,
+      "sector": "transportation",
+      "criteria": [
+       [
+        "PEG",
+        "na",
+        null
+       ],
+       [
+        "debt_to_equity",
+        "fail",
+        6.384
+       ],
+       [
+        "roe",
+        "pass",
+        48.9
+       ],
+       [
+        "fcf_positive",
+        "pass",
+        4744000000
+       ],
+       [
+        "cycle_position",
+        "pass",
+        0.658
+       ]
+      ]
+     },
+     "proof": [
+      "0xa18a0eb5fab99efeb1e83531c931b5cbf8001cc479addc7625ef09463dee05e8",
+      "0x95e673a4d73747f3f1a3410e125d55bf4f317088dbec6c39d43b652cc2a2bcfb",
+      "0xfe2e6b68c4dcbabdeaf99f450e4c6fe1f42289ef7fe337e96d72db97ed308c32",
+      "0xf968a69770b6766320ec3c9eab97ba3d858ba59994a5b01bd237a8f0c74da1fa",
+      "0x056f55ecead6d59149eb60bee175f23a748f006d5507356e3ccad10e8f0eca9e",
+      "0xa9872833c2c1a3e3a5a4f82b876decd69c6bb06cc493569493d4c8982c395421",
+      "0x88b754bc5fa60fd25fe305c9f4412a49f199f0ee72417d78f2cb6e42f7a7e278",
+      "0xd7552cebb0699323361f039288d3180fab065ce55ee095d6237759dada3929c7",
+      "0x38561ae46b00eb6c5d1cd0427c44f045e7a860a61bb73abadc20b1dbb38aacda",
+      "0xbde256032f430893e48f37f8559bf469f77c2330b93bd20b304a7e42aa1e62db",
+      "0x08c77b1e90140e0c81de074cbc8de16cdc1c7c424f3cba14666a8b98130969c0",
+      "0x90a8e7ec241d6a71cb21e01ec0eeb54f14bf92a5bade7c8d9df3a1cb08ccdbb8",
+      "0x698181ff2c79e65385dabcfe79144fd1e7fef06160edf92e7d6a8eabcde18f2f",
+      "0x7678817235554066d8e5f9abd4504ed40eecae4b8e51fff008fa5f69905076cb",
+      "0xff7664e4de757501910f120a478f71a4ccc78d0c24438804e9b99c9cd458e0da",
+      "0xc9f34994de843ae6dc7589cbfec4b6f7be501660da241b6a855e67a9ec2f5785"
+     ]
+    },
+    {
+     "index": 31761,
+     "decision": {
+      "ts": "2022-01-03T00:00:00.000Z",
+      "symbol": "AAP",
+      "category": "slow_grower",
+      "verdict": "hold",
+      "convictionScore": 64,
+      "sector": "retail",
+      "criteria": [
+       [
+        "PEGY",
+        "fail",
+        8.38
+       ],
+       [
+        "value_trap_guard",
+        "na",
+        702112000
+       ],
+       [
+        "debt_to_equity",
+        "pass",
+        0.29
+       ],
+       [
+        "inventory_vs_sales",
+        "pass",
+        "2.4% vs 4.1%"
+       ],
+       [
+        "growth_consistency",
+        "pass",
+        "3/4 yrs +"
+       ],
+       [
+        "roe",
+        "fail",
+        13.9
+       ],
+       [
+        "fcf_positive",
+        "pass",
+        702112000
+       ],
+       [
+        "dividend_yield",
+        "fail",
+        0.417
+       ],
+       [
+        "dividend_cover",
+        "pass",
+        7.14
+       ]
+      ]
+     },
+     "proof": [
+      "0xa83bb37cfbccaee253033d7de69e08cd268c76e9729088254e6357c5f99c8614",
+      "0xe5d66c88ef39ebc0956048bf09fab7e6588a79406519689bd121ae3cfc38029e",
+      "0x31aa81758083a7a2caa242a20c44437b8c8750c5e62e41643cf39d7531131649",
+      "0xc0159bebd5ad51c3e7968ce00eb90f35e0a2f0d758a51d526655b9759340e0b2",
+      "0x1ebdc2d95dd86a1cd8d0288aec6bf530e94cbddbe0b11531fe74c751cbef7771",
+      "0x4890fbe4490cca539e004af8db2d26343f5a76d9b9b8030a7bda863f779d378a",
+      "0x962c25137e072c97f16be725b2928f4394bdcbba88735c6109517b9b1fd2c948",
+      "0x6b445ef5e5d49200967b2bcf9d2cb4e10eb26616002d12829cc9c38e5f6c9eb2",
+      "0xab6010a75c8c03c80ed1bebaf13cbcde6a8f447b6b77ae1505307f909bd2d7c8",
+      "0xf0210347069e357e57f96f44f6f648340cb5c4e8e913a2d10f36e2f874e2c454",
+      "0x755891265fd8aeff2381e9c80f66c7d5b2f947124dba5f86a33c66f4133a76e6",
+      "0x4b1f64366184866a5cb5730a79299b18842922b000b3c3fe0212f0796e90afc8",
+      "0xe11a8dd8cb4034d5c1686ae38f90e154cf4b756d3b4bc29d393a28ba718be4ba",
+      "0xdaa52cdab3a8edddd6640ad4dbf98a033a3b7c8dfb24f5670bc78ce398068d85",
+      "0xdcb455be4ce0cf8f337d215473a3a9e449b50f79b84b59f3597b8b4659b3a34f",
+      "0xc9f34994de843ae6dc7589cbfec4b6f7be501660da241b6a855e67a9ec2f5785"
+     ]
+    },
+    {
+     "index": 7,
+     "decision": {
+      "ts": "2016-01-05T00:00:00.000Z",
+      "symbol": "ACN",
+      "category": "stalwart",
+      "verdict": "sell",
+      "convictionScore": 67,
+      "sector": "services",
+      "criteria": [
+       [
+        "PEGY",
+        "fail",
+        1.97
+       ],
+       [
+        "value_trap_guard",
+        "na",
+        3697120000
+       ],
+       [
+        "debt_to_equity",
+        "pass",
+        0.004
+       ],
+       [
+        "growth_consistency",
+        "pass",
+        "3/4 yrs +"
+       ],
+       [
+        "roe",
+        "pass",
+        49.8
+       ],
+       [
+        "fcf_positive",
+        "pass",
+        3697120000
+       ]
+      ]
+     },
+     "proof": [
+      "0xd0212592414e32ff55956b33a2f45e85fdaa27cd9622c52d062b38edc336034b",
+      "0xfdbaebd49e610aa5da3d662d548fa107bde1be63a4a17e473147c6e5e7e0ed69",
+      "0x987be78bf31b4d6eccafe8b906a1fcdad738d3253e209bdf1b8e45fd51449788",
+      "0x61491785a25f5ed25de69fdac15210feb81e3b02462cb0956c5228c1d86f029f",
+      "0xade1015561ee8232dfce9314f882ef072bc3297010c8061b2405c71cac7295c8",
+      "0xa1bf2c0a923649d02d7d48fd04b82f2a1ca662394fc18a789cd895114f9e7247",
+      "0x21d8ead32c50ce8d2e8fb9b0713e962363d1e96f2bf94c75006610c18ae591bb",
+      "0x6dc622287d8eb506251041383c6871f7e7012fca1dfd81f74e60e5ae862fcb5d",
+      "0xdbbedb1bf2331dbe9e39d58374ebc9a249ec2418ed10933cf3da24047458f27f",
+      "0xd76a3ac9eaa3d1e5528a1b38247a7600b7db6299293a995300f29d7ec8ba9f6c",
+      "0x899a3f4ccf7458aff554f520c60fe7e432e3bc4c422a43688a4251cf48d1e845",
+      "0x961db6649bb369d0b14d17b0f3c51d54695ea23c850c6d0d0c0d7162a42ad563",
+      "0x6ac2a3a4ec96647a43d02967198922b733a496cc78ec2821823b644a9e759cc5",
+      "0xff4e0f59cefab1c518eb82da6b0ac76f2ffb73aed94b3975408bf39a70d8949c",
+      "0xff7664e4de757501910f120a478f71a4ccc78d0c24438804e9b99c9cd458e0da",
+      "0xc9f34994de843ae6dc7589cbfec4b6f7be501660da241b6a855e67a9ec2f5785"
+     ]
+    }
+   ]
+  }
+ ]
+}

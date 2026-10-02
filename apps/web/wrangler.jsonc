@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // DipBuyer web app on Cloudflare Workers (free plan) via OpenNext. Served at dipbuyer.ai (canonical),
+  // www.dipbuyer.ai (redirects to the apex in next.config.mjs) and app.dipbuyer.ai.
+  "name": "dipbuyer-web",
+  "account_id": "090f06ae4c3788d1e146224f6e8a6fdc",
+  "main": "worker.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "routes": [
+    { "pattern": "dipbuyer.ai", "custom_domain": true },
+    { "pattern": "www.dipbuyer.ai", "custom_domain": true },
+    { "pattern": "app.dipbuyer.ai", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}
