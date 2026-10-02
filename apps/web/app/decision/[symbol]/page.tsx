@@ -1,21 +1,58 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import { hashDecision } from "@dipbuyer/chain-monad/browser";
 import { getDecision, syntheticSources, type AnalyzeOutput } from "../../../lib/api";
 import { ConvictionGauge, CriteriaList, VerdictBadge, VerdictExplainer } from "../../../components/decision-ui";
 import { DemoDataBanner } from "../../../components/demo-data-banner";
+
+/** An anchored decision for this symbol, from the committed list the verify page also reads. */
+interface AnchoredRef {
+  root: string;
+  index: number;
+  label: string;
+  date: string;
+  verdict: string;
+  /** True when the record shown on this page hashes to the anchored one. */
+  sameRecord: boolean;
+}
 
 export default function DecisionPage({ params }: { params: Promise<{ symbol: string }> }) {
   const { symbol } = use(params);
   const [data, setData] = useState<AnalyzeOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [anchorMsg, setAnchorMsg] = useState<string | null>(null);
+  const [anchored, setAnchored] = useState<AnchoredRef[] | null>(null);
 
   useEffect(() => {
     getDecision(symbol)
       .then(setData)
       .catch((e) => setError(e instanceof Error ? e.message : "Request failed"));
   }, [symbol]);
+
+  // Anchored decisions for this symbol (sample decisions with proofs in /monad-batches.json). The live record
+  // above is analysed "now", so it is only anchored if it hashes to one of these.
+  useEffect(() => {
+    if (!data) return;
+    const sym = data.record.symbol.toUpperCase();
+    let hash: string | null = null;
+    try { hash = hashDecision(data.record); } catch { /* leave null: the link still works */ }
+    fetch("/monad-batches.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((f: { batches: { root: string; label: string; samples: { index: number; decision: Record<string, unknown> }[] }[] }) => {
+        const found: AnchoredRef[] = [];
+        for (const b of f.batches) {
+          for (const s of b.samples) {
+            if (String(s.decision.symbol).toUpperCase() !== sym) continue;
+            let same = false;
+            try { same = hash !== null && hashDecision(s.decision) === hash; } catch { /* ignore */ }
+            found.push({ root: b.root, index: s.index, label: b.label, date: String(s.decision.ts).slice(0, 10), verdict: String(s.decision.verdict), sameRecord: same });
+          }
+        }
+        setAnchored(found);
+      })
+      .catch(() => setAnchored(null));
+  }, [data]);
 
   const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001/api";
   async function anchor() {
@@ -114,9 +151,31 @@ export default function DecisionPage({ params }: { params: Promise<{ symbol: str
                 what the user pastes into /verify (or hands to an auditor). */}
             <button className="btn btn-outline" onClick={downloadRecord}>Download record (JSON)</button>
             <a className="btn btn-outline" href="/verify">Verify a record</a>
+            <a className="btn btn-outline" href={`/verify/monad?symbol=${encodeURIComponent(r.symbol)}`}>Verify on Monad</a>
             <a className="btn btn-outline" href={`/stock/${r.symbol}`}>Full research page</a>
           </div>
           {anchorMsg && <p className="muted mono small wrap" style={{ marginTop: 10 }}>{anchorMsg}</p>}
+          <div className="card-title" style={{ marginTop: 22 }}>On Monad</div>
+          {anchored === null || anchored.length === 0 ? (
+            <p className="muted small">
+              This live analysis is not anchored on Monad, and no anchored decision for {r.symbol} is listed yet.
+              Anchored batches (testnet) can still be checked on the verify page.
+            </p>
+          ) : (
+            <>
+              {anchored.some((a) => a.sameRecord) && <p className="verify-good small">✅ This exact record is in an anchored batch.</p>}
+              <p className="muted small">
+                This page shows a live analysis, which is not itself anchored. Anchored decisions for {r.symbol}:
+              </p>
+              <div style={{ display: "grid", gap: 6 }}>
+                {anchored.map((a) => (
+                  <a key={`${a.root}-${a.index}`} className="btn btn-outline" href={`/verify/monad?root=${a.root}&index=${a.index}`}>
+                    {a.date} · {a.verdict} · {a.label}
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
           {r.sellTriggers.length > 0 && (
             <>
               <div className="card-title" style={{ marginTop: 22 }}>What Lynch would watch for</div>

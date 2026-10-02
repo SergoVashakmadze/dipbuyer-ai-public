@@ -114,7 +114,21 @@ export default function VerifyMonadPage() {
         const f: BatchFile = { ...manifest, batches: [...manifest.batches, ...extra] };
         setFile(f);
         const first = f.batches.find((b) => b.samples.length > 0);
-        if (first?.samples[0]) pick(f, first, first.samples[0]);
+        // Deep links from a decision page: ?root=<batch root>&index=<leaf index>, or ?symbol=<ticker>.
+        const q = new URLSearchParams(window.location.search);
+        const wantRoot = q.get("root")?.toLowerCase();
+        const wantIndex = q.get("index");
+        const wantSymbol = q.get("symbol")?.toUpperCase();
+        let target: { b: Batch; s: Sample } | undefined;
+        for (const b of f.batches) {
+          for (const s of b.samples) {
+            const byRoot = wantRoot && b.root.toLowerCase() === wantRoot && String(s.index) === wantIndex;
+            const bySymbol = !wantRoot && wantSymbol && String(s.decision.symbol).toUpperCase() === wantSymbol;
+            if (byRoot || bySymbol) target ??= { b, s };
+          }
+        }
+        if (target) pick(f, target.b, target.s);
+        else if (first?.samples[0]) pick(f, first, first.samples[0]);
 
         // The list says which batches exist; the chain says whether they do, and what is in them.
         const verifier = new MonadVerifier({
