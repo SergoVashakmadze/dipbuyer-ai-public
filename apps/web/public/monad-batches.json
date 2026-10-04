@@ -783,6 +783,3617 @@
      ]
     }
    ]
+  },
+  {
+   "root": "0xa447b706339f87c2df213a70be6ad2c116a55df03f6af512ccf4779ac5fc2310",
+   "txHash": "0x6a3d20b7365dde8851936e778da60b570a9843d0a7ec026feb7f33d7541fa919",
+   "label": "Live screen, 4 Oct 2026 (36 stocks, strategy v0.4.2)",
+   "samples": [
+    {
+     "index": 0,
+     "decision": {
+      "decisionId": "2026-10-04:AAPL",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "AAPL",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 98767000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.338,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-21.5% vs 6.4%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 151.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 98767000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "stalwart: EPS growth 7.4% in the 5–20% band → avoid (score 0)",
+      "sellTriggers": [
+       "gain >= 30-50%",
+       "fundamental deterioration"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-09-27"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x1e8fd97793d0d604f8b3b0382d5fd465ed2bbea641e172d5f9df19c4e1ab6b9e",
+      "0xa03443759984d8a6327de6538b06fbf586ca394dc17bf4bc8115e367d5a48bec",
+      "0xef2d6f69359e884f171a0b0c4ff3ffda776963c3960dc1954c44996623e5ac39",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 1,
+     "decision": {
+      "decisionId": "2026-10-04:MSFT",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "MSFT",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 66987000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.091,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "48.9% vs 17.8%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "4/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 30.2,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 66987000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-06-30"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xaa05e124893ce6b407179d2d4b0945f1df5fd4b6731089639c4007a206c773ce",
+      "0xa03443759984d8a6327de6538b06fbf586ca394dc17bf4bc8115e367d5a48bec",
+      "0xef2d6f69359e884f171a0b0c4ff3ffda776963c3960dc1954c44996623e5ac39",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 2,
+     "decision": {
+      "decisionId": "2026-10-04:GOOGL",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "GOOGL",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 73266000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.117,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 31.8,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 73266000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x3fe765f938f1a629b0f38738819f5f9ce572aa01ed8b27bbfd18d67a0f3e140a",
+      "0xc65e9a190b949d7d5b262cf653165f373d0e351635c801065e4fd141430929af",
+      "0xef2d6f69359e884f171a0b0c4ff3ffda776963c3960dc1954c44996623e5ac39",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 3,
+     "decision": {
+      "decisionId": "2026-10-04:META",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "META",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 46109000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.27,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 27.8,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 46109000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x1f3741e4d77b88960cdb541a76c83d819ff6e934b48fc160a30b411b6c40f0e3",
+      "0xc65e9a190b949d7d5b262cf653165f373d0e351635c801065e4fd141430929af",
+      "0xef2d6f69359e884f171a0b0c4ff3ffda776963c3960dc1954c44996623e5ac39",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 4,
+     "decision": {
+      "decisionId": "2026-10-04:NVDA",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "NVDA",
+      "lynchCategory": "fast_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 102718000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.054,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "112.3% vs 65.5%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": 76.3,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 102718000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "fast_grower: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-01-25"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x40d6adbf63a1846cb625161395b1d39bfe44d4662a58a8ae65cd7f6de6e4f858",
+      "0xef61653b12d89a828e9ab4659ae7ac93a208cd82a39a2561034bdaddf2fda135",
+      "0x57905aa03d7e9395229fc1743f64d4a8f3695425b74cd21535d276c64c125ee9",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 5,
+     "decision": {
+      "decisionId": "2026-10-04:ADBE",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "ADBE",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 9852000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.534,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "growth_consistency",
+        "value": "4/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 61.3,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 9852000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-11-28"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x204d38158aef8c0a9cffd29b0c65e0bb01842ac919d1a7cb29b7b043dfbc31ca",
+      "0xef61653b12d89a828e9ab4659ae7ac93a208cd82a39a2561034bdaddf2fda135",
+      "0x57905aa03d7e9395229fc1743f64d4a8f3695425b74cd21535d276c64c125ee9",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 6,
+     "decision": {
+      "decisionId": "2026-10-04:CRM",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "CRM",
+      "lynchCategory": "fast_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 14402000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.244,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": 12.6,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 14402000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "fast_grower: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-01-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x204292b3d1de1d7fb06193e8b84d8dbc810e324b1c4f983d02ffcc80743152f7",
+      "0xc48804f91ec230221dee0061542b686817a3fdb0e0cef1ae98c559e339329f8d",
+      "0x57905aa03d7e9395229fc1743f64d4a8f3695425b74cd21535d276c64c125ee9",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 7,
+     "decision": {
+      "decisionId": "2026-10-04:INTC",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "INTC",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": -4949000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.408,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-4.8% vs -0.5%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "0/3 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": -0.2,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": -4949000000,
+        "threshold": ">0",
+        "result": "fail",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-27"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xa68c15e411f58b6fd2f78577b5f5ffeda13a72806723ec13df178054bca7bdd1",
+      "0xc48804f91ec230221dee0061542b686817a3fdb0e0cef1ae98c559e339329f8d",
+      "0x57905aa03d7e9395229fc1743f64d4a8f3695425b74cd21535d276c64c125ee9",
+      "0x298341fe32c17fceb9e51cffa82a589882fd7609b953a0bc47af19c3ac3ad49d",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 8,
+     "decision": {
+      "decisionId": "2026-10-04:CSCO",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "CSCO",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 12767000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.587,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "80% vs 11.8%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 26.4,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 12767000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-07-25"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5edac19392c0293155b084dc3d5c43db544e1daf8a29b6cb9544e8def5d1ef9e",
+      "0x31f303c4c190ef065ea17bc0e033c1d3ba8f321f943d947119e8cf973296ab87",
+      "0xdf8170a154c9ae5848cea03257c81895822b5f2be48ee9237b654fbf17799e46",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 9,
+     "decision": {
+      "decisionId": "2026-10-04:QCOM",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "QCOM",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 14012000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.698,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "1.6% vs 13.7%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 26.1,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 14012000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-09-28"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5dc82a95f695c4af8329b03451a6a5078531e2305d902001baabf3fb1d74ece9",
+      "0x31f303c4c190ef065ea17bc0e033c1d3ba8f321f943d947119e8cf973296ab87",
+      "0xdf8170a154c9ae5848cea03257c81895822b5f2be48ee9237b654fbf17799e46",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 10,
+     "decision": {
+      "decisionId": "2026-10-04:AMZN",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "AMZN",
+      "lynchCategory": "fast_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 139514000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.167,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "12% vs 12.4%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/3 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": 18.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 139514000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "fast_grower: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xe7e80a690ecdc9a401b9ffd218fdb71e3067ad769c7edc4c8be46c984d074b1f",
+      "0x64952a99070a15dcf5de4c7ff1e78afafe912d5f6fe0129cb1eaf9e43fd27117",
+      "0xdf8170a154c9ae5848cea03257c81895822b5f2be48ee9237b654fbf17799e46",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 11,
+     "decision": {
+      "decisionId": "2026-10-04:NKE",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "NKE",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 2184000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.534,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 20.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 2184000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-05-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xdd822fb860714b601a04cf48311b85199a6ce12770704c45e0f206c489553a3e",
+      "0x64952a99070a15dcf5de4c7ff1e78afafe912d5f6fe0129cb1eaf9e43fd27117",
+      "0xdf8170a154c9ae5848cea03257c81895822b5f2be48ee9237b654fbf17799e46",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 12,
+     "decision": {
+      "decisionId": "2026-10-04:SBUX",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "SBUX",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 2442000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": -1.985,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "23% vs 2.8%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": -22.9,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 2442000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-09-28"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5c604a2fee5f7c98311078c8ee8d5ad9d005d9d7795486700aced46c5f9b2fb7",
+      "0x157750c8b7f73e1f757b623d8b207ba2e12ecbb1409d40722e30b7ee7a282f0e",
+      "0x2b0f2615495db66fbab2240d45e489a62b2605b647c586018c45048a5578f5b3",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 13,
+     "decision": {
+      "decisionId": "2026-10-04:TGT",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "TGT",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 2835000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.018,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-3.4% vs -1.7%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 22.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 2835000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "slow_grower: EPS growth -12.9% ≤ 5% → avoid (score 0)",
+      "sellTriggers": [
+       "dividend-cut risk",
+       "lost yield advantage"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-01-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x3c8d77c0e0013ab380759894f75493ce1ca3816c189d883422753a1c8f3ffff7",
+      "0x157750c8b7f73e1f757b623d8b207ba2e12ecbb1409d40722e30b7ee7a282f0e",
+      "0x2b0f2615495db66fbab2240d45e489a62b2605b647c586018c45048a5578f5b3",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 14,
+     "decision": {
+      "decisionId": "2026-10-04:KO",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "KO",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 5296000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.412,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-6.4% vs 1.9%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 40.7,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 5296000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "stalwart: EPS growth 7.8% in the 5–20% band → avoid (score 0)",
+      "sellTriggers": [
+       "gain >= 30-50%",
+       "fundamental deterioration"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5042187002f48de5b093592bc52993e06aaa8a124dfb73ac33a27a64e21d8104",
+      "0x05a47a33d66d4c235099c43aa499163ace03282186a853cc7c2ce50f8d31b5ad",
+      "0x2b0f2615495db66fbab2240d45e489a62b2605b647c586018c45048a5578f5b3",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 15,
+     "decision": {
+      "decisionId": "2026-10-04:PEP",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "PEP",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 12087000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 2.41,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "10.2% vs 2.3%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 40.4,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 12087000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "slow_grower: EPS growth 2.2% ≤ 5% → avoid (score 0)",
+      "sellTriggers": [
+       "dividend-cut risk",
+       "lost yield advantage"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-27"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x7820a89bde0072e9bbf9562cbebd2b89722ec8c05e71d82b22eee24b06783779",
+      "0x05a47a33d66d4c235099c43aa499163ace03282186a853cc7c2ce50f8d31b5ad",
+      "0x2b0f2615495db66fbab2240d45e489a62b2605b647c586018c45048a5578f5b3",
+      "0x8f1a4a9adfc09c2f67b56ef3e9833ba2d18410064b273fed4320e8584988ac15",
+      "0xc9afbb27a32675ae529866e7f31617f8ba0c404f297cc3a1827810821a6d1e9d",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 16,
+     "decision": {
+      "decisionId": "2026-10-04:PG",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "PG",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 15147000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.629,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "8.2% vs 3.3%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "4/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 29.5,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 15147000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2026-06-30"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x0498b97e3e6ce67161e8a0c83efd3fb0367f782675f9bb1ee90bab468d53c3d5",
+      "0xcfda5e2776864db3caaf3144240b825b3324ba5f26b6ac0c2c93d49a87602904",
+      "0x3eb33df26925e2f296714c99ebe3a51485c3ba8c1e993533b656c55d2c1544ee",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 17,
+     "decision": {
+      "decisionId": "2026-10-04:MCD",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "MCD",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 7186000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": -23.169,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "8.9% vs 3.7%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": -478.1,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 7186000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x8926de2283af4eb042a0f6b79919615be0a73901cb002d3898335190ccb7bf96",
+      "0xcfda5e2776864db3caaf3144240b825b3324ba5f26b6ac0c2c93d49a87602904",
+      "0x3eb33df26925e2f296714c99ebe3a51485c3ba8c1e993533b656c55d2c1544ee",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 18,
+     "decision": {
+      "decisionId": "2026-10-04:JNJ",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "JNJ",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 19698000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.588,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "14% vs 6%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 32.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 19698000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-28"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xee3fe6e0276245e2047a9965ed1a726857c2de981d75b52b57c677f4f2fd8b7f",
+      "0x87e14fdf473f3fd6dc6ce55bb0d91a4ca5f073a70f1c10a87bc11e74ebf8abeb",
+      "0x3eb33df26925e2f296714c99ebe3a51485c3ba8c1e993533b656c55d2c1544ee",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 19,
+     "decision": {
+      "decisionId": "2026-10-04:PFE",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "PFE",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 9075000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.749,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-1.8% vs -1.6%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 9,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 9075000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x280dfc097b9d013f9e997dbdeafdd32aab1be4db6a2230e109461ff11141ea51",
+      "0x87e14fdf473f3fd6dc6ce55bb0d91a4ca5f073a70f1c10a87bc11e74ebf8abeb",
+      "0x3eb33df26925e2f296714c99ebe3a51485c3ba8c1e993533b656c55d2c1544ee",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 20,
+     "decision": {
+      "decisionId": "2026-10-04:UNH",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "UNH",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 16075000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.783,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2,
+        "note": "D/E not a solvency measure for financials/utilities (SIC-scoped)"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-13.2% vs 11.8%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 12,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 16075000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x9590fa676b2002dcb6fa8681cb89baffbc3583b70f21f2ecb37440f4c0e05a2a",
+      "0x059540203cbaaee32ead407be8a791868c9c3df0c9c997bf8ba253bdfa9b933b",
+      "0x2616c13a857ca7e5f95cda344f88c6760bafb256a774077a26a7fa8fc6d8390b",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 21,
+     "decision": {
+      "decisionId": "2026-10-04:CVS",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "CVS",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 7807000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.858,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "6.3% vs 7.8%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 2.4,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 7807000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "slow_grower: EPS growth -30.7% ≤ 5% → avoid (score 0)",
+      "sellTriggers": [
+       "dividend-cut risk",
+       "lost yield advantage"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x0a5b339d9ef14f8b4a8b2a41a38509711280be6fff38718d15f61e050696d055",
+      "0x059540203cbaaee32ead407be8a791868c9c3df0c9c997bf8ba253bdfa9b933b",
+      "0x2616c13a857ca7e5f95cda344f88c6760bafb256a774077a26a7fa8fc6d8390b",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 22,
+     "decision": {
+      "decisionId": "2026-10-04:MRK",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "MRK",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 12360000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.938,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "9% vs 1.3%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 34.7,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 12360000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "stalwart: EPS growth 9.1% in the 5–20% band → avoid (score 0)",
+      "sellTriggers": [
+       "gain >= 30-50%",
+       "fundamental deterioration"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xc2cf0f200da98769947e12ea54425f0f34e9f37675d60405dd608dba84c08ad1",
+      "0x1534bbd713a3e6603ed0fd9d2b27b3afa4053386a670061019779a95ec52d846",
+      "0x2616c13a857ca7e5f95cda344f88c6760bafb256a774077a26a7fa8fc6d8390b",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 23,
+     "decision": {
+      "decisionId": "2026-10-04:ABBV",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "ABBV",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 17816000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": -20.641,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "18.4% vs 8.6%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": -129.2,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 17816000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x2abf453f14517d8bd19736ca7f2f2f4950aabdb20ddd695a6903d6b9fd5a6e3e",
+      "0x1534bbd713a3e6603ed0fd9d2b27b3afa4053386a670061019779a95ec52d846",
+      "0x2616c13a857ca7e5f95cda344f88c6760bafb256a774077a26a7fa8fc6d8390b",
+      "0x3a8ac31b7c801ffe5d9cad3f84c100f80f899c85300856570d86179e72d246cc",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 24,
+     "decision": {
+      "decisionId": "2026-10-04:JPM",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "JPM",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": -147782000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.179,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2,
+        "note": "D/E not a solvency measure for financials/utilities (SIC-scoped)"
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 15.7,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": -147782000000,
+        "threshold": ">0",
+        "result": "fail",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xfdf99fd22183d7c6771d7bd273e28fcea4cfd2480a7b7a98e9a06e269ac1e1a9",
+      "0xeb397c6cc34130aa32fdd52f47f5357128ec2307b5cef5d0224e36c94e094613",
+      "0x17f7cff0b70dbcef952299776696c1a400f11a982aa87be26bc948e6104dff8e",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 25,
+     "decision": {
+      "decisionId": "2026-10-04:BAC",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "BAC",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 12613000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.115,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2,
+        "note": "D/E not a solvency measure for financials/utilities (SIC-scoped)"
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 10.1,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 12613000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "slow_grower: insufficient_data: no dividend yield — slow growers are bought for the dividend → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no dividend yield — slow growers are bought for the dividend",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5777235cdf33ded2f3c442a4294e34fff9d950363942952c26478ed476d0f41f",
+      "0xeb397c6cc34130aa32fdd52f47f5357128ec2307b5cef5d0224e36c94e094613",
+      "0x17f7cff0b70dbcef952299776696c1a400f11a982aa87be26bc948e6104dff8e",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 26,
+     "decision": {
+      "decisionId": "2026-10-04:V",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "V",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 23059000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.664,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 52.9,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 23059000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-09-30"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x04e8a770b9bba2e5137f55914362561605be0f9ea30471102c7c491f290a2d78",
+      "0xba17c3a02284849f693168964b0979c90b6d7b7a869750866ce1907eb0748c0e",
+      "0x17f7cff0b70dbcef952299776696c1a400f11a982aa87be26bc948e6104dff8e",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 27,
+     "decision": {
+      "decisionId": "2026-10-04:WFC",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "WFC",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": -19001000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.066,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2,
+        "note": "D/E not a solvency measure for financials/utilities (SIC-scoped)"
+       },
+       {
+        "name": "growth_consistency",
+        "value": "3/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 11.8,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": -19001000000,
+        "threshold": ">0",
+        "result": "fail",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x52bb3af2cf6a5f6ffcb1f292bacdd029f20af58ee086533270260aa08d2e6915",
+      "0xba17c3a02284849f693168964b0979c90b6d7b7a869750866ce1907eb0748c0e",
+      "0x17f7cff0b70dbcef952299776696c1a400f11a982aa87be26bc948e6104dff8e",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 28,
+     "decision": {
+      "decisionId": "2026-10-04:CAT",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "CAT",
+      "lynchCategory": "cyclical",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "n/a for category",
+        "result": "na",
+        "weight": 0,
+        "note": "earnings-based PEG not applicable to cyclical"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.699,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "7.8% vs 4.3%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": 41.7,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 8918000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "cycle_position",
+        "value": 1.101,
+        "threshold": "EPS <= trailing avg (trough side)",
+        "result": "fail",
+        "weight": 0.4,
+        "note": "earnings above cycle average — late-cycle risk"
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "cyclical: Cyclical industry (SIC 3531) → avoid (score 0)",
+      "sellTriggers": [
+       "inventories build",
+       "commodities peak",
+       "capacity added"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xad45eb65c5995efa243a802bc4c175ab28081ba66e56cfb7f8d676bd0808a589",
+      "0x1a72b996cabae6356369501e2e7cc1ce8db59801d22343d0f8e7dc546210086c",
+      "0x83e97069ffab573596867e4464bf78703f37d818b2f0468ed5a353eb483b70e5",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 29,
+     "decision": {
+      "decisionId": "2026-10-04:UPS",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "UPS",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 4765000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.487,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "-10.5% vs -2.6%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "0/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 34.3,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 4765000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "slow_grower: EPS growth -18.2% ≤ 5% → avoid (score 0)",
+      "sellTriggers": [
+       "dividend-cut risk",
+       "lost yield advantage"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x4d8f4e682c9a06a777d414d219511ee78a64cd7be78f65de67cae900621f9a34",
+      "0x1a72b996cabae6356369501e2e7cc1ce8db59801d22343d0f8e7dc546210086c",
+      "0x83e97069ffab573596867e4464bf78703f37d818b2f0468ed5a353eb483b70e5",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 30,
+     "decision": {
+      "decisionId": "2026-10-04:BA",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "BA",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": -1877000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 9.919,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "roe",
+        "value": 41,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": -1877000000,
+        "threshold": ">0",
+        "result": "fail",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "stalwart: Growth unknown; defaulting to stalwart screen → avoid (score 0)",
+      "sellTriggers": [
+       "gain >= 30-50%",
+       "fundamental deterioration"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x9c48639cafed3adef295c2949ea56570611cdb3e77f2efd57cc52e96f11e19b7",
+      "0x6e8038748816775fb3fd7bcfb2f772bf86d8eac311bc9bdcc383901dd571ba3a",
+      "0x83e97069ffab573596867e4464bf78703f37d818b2f0468ed5a353eb483b70e5",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 31,
+     "decision": {
+      "decisionId": "2026-10-04:XOM",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "XOM",
+      "lynchCategory": "cyclical",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "n/a for category",
+        "result": "na",
+        "weight": 0,
+        "note": "earnings-based PEG not applicable to cyclical"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.168,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 11.1,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 23612000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "cycle_position",
+        "value": 0.796,
+        "threshold": "EPS <= trailing avg (trough side)",
+        "result": "pass",
+        "weight": 0.4,
+        "note": "earnings below cycle average"
+       }
+      ],
+      "convictionScore": 94,
+      "verdict": "hold",
+      "rationale": "cyclical: Cyclical industry (SIC 2911) → hold (score 94)",
+      "sellTriggers": [
+       "inventories build",
+       "commodities peak",
+       "capacity added"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0.94,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0xe0ebe74edb129b737822132e399dbe9670b55158636c635036a71547c3930879",
+      "0x6e8038748816775fb3fd7bcfb2f772bf86d8eac311bc9bdcc383901dd571ba3a",
+      "0x83e97069ffab573596867e4464bf78703f37d818b2f0468ed5a353eb483b70e5",
+      "0xdc1667fb98118d52de80208a4eb25e61e2bfb53a0469d8d9c6f496c283721968",
+      "0x2f018061d4d2b36415111c870b30a9db816259c6bf82b9cc2dcf217b24e5b43b",
+      "0x7869caf4e52587c1e2a9fe534bab1a078901f82aaa76538bbd35207a3e8d4729"
+     ]
+    },
+    {
+     "index": 32,
+     "decision": {
+      "decisionId": "2026-10-04:CVX",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "CVX",
+      "lynchCategory": "cyclical",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "n/a for category",
+        "result": "na",
+        "weight": 0,
+        "note": "earnings-based PEG not applicable to cyclical"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 0.272,
+        "threshold": "<0.33",
+        "result": "pass",
+        "weight": 0.2
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "7% vs -4.6%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": 6.6,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 33939000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "cycle_position",
+        "value": 0.612,
+        "threshold": "EPS <= trailing avg (trough side)",
+        "result": "pass",
+        "weight": 0.4,
+        "note": "earnings below cycle average"
+       }
+      ],
+      "convictionScore": 71,
+      "verdict": "hold",
+      "rationale": "cyclical: Cyclical industry (SIC 2911) → hold (score 71)",
+      "sellTriggers": [
+       "inventories build",
+       "commodities peak",
+       "capacity added"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0.71,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x9f3795089eb25559c75ff73ff1befcfd845afc0ca8098dcd835ea30f40071bbc",
+      "0xd3cfad7418ca1818118aec65c86a032005486c89be78f604d5703eec4ae39ccf",
+      "0xe64801a04da3e557b48d4da618b116a9dbe03af01097071f2fbc7714bb7d5612"
+     ]
+    },
+    {
+     "index": 33,
+     "decision": {
+      "decisionId": "2026-10-04:DOW",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "DOW",
+      "lynchCategory": "cyclical",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "n/a for category",
+        "result": "na",
+        "weight": 0,
+        "note": "earnings-based PEG not applicable to cyclical"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.129,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "0.8% vs -7%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.25
+       },
+       {
+        "name": "roe",
+        "value": -15.3,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 1032000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.15
+       },
+       {
+        "name": "cycle_position",
+        "value": null,
+        "threshold": "EPS <= trailing avg (trough side)",
+        "result": "na",
+        "weight": 0.4,
+        "note": "EPS history too short or crosses zero"
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "cyclical: Cyclical industry (SIC 2821) → avoid (score 0)",
+      "sellTriggers": [
+       "inventories build",
+       "commodities peak",
+       "capacity added"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x002dc17fbc8fc8c87666aa906546f1a7ca8bd0884d2990418aed56a942c57363",
+      "0xd3cfad7418ca1818118aec65c86a032005486c89be78f604d5703eec4ae39ccf",
+      "0xe64801a04da3e557b48d4da618b116a9dbe03af01097071f2fbc7714bb7d5612"
+     ]
+    },
+    {
+     "index": 34,
+     "decision": {
+      "decisionId": "2026-10-04:NEE",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "NEE",
+      "lynchCategory": "stalwart",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0.3
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 12485000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.15,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.74,
+        "threshold": "<0.33",
+        "result": "na",
+        "weight": 0.2,
+        "note": "D/E not a solvency measure for financials/utilities (SIC-scoped)"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "9.3% vs 9.8%",
+        "threshold": "inv% <= rev%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "2/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0.2
+       },
+       {
+        "name": "roe",
+        "value": 12.5,
+        "threshold": ">=15%",
+        "result": "fail",
+        "weight": 0.15
+       },
+       {
+        "name": "fcf_positive",
+        "value": 12485000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.05
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "abstain",
+      "rationale": "stalwart: insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth → abstain (score 0)",
+      "sellTriggers": [],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": "insufficient_data: no PEG — needs a positive P/E (price and positive EPS) and positive EPS growth",
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x5216444d3037b3698dc190fd9a05436cdd93e5ec35786fba2e4f374e0a2db319",
+      "0xfc81fa5cd1509f06e8926d0be7794b1c417ddd723d1d33b8ce6a063f740edc61",
+      "0xe64801a04da3e557b48d4da618b116a9dbe03af01097071f2fbc7714bb7d5612"
+     ]
+    },
+    {
+     "index": 35,
+     "decision": {
+      "decisionId": "2026-10-04:VZ",
+      "ts": "2026-10-04",
+      "mode": "RESEARCH_ONLY",
+      "execution": "PAPER",
+      "clientId": null,
+      "tenantId": null,
+      "symbol": "VZ",
+      "lynchCategory": "slow_grower",
+      "understandability": {
+       "passed": true,
+       "businessSummary": "(placeholder — replace with LLM business summary)",
+       "growthStory": "(placeholder — replace with LLM growth story)"
+      },
+      "criteria": [
+       {
+        "name": "PEG",
+        "value": null,
+        "threshold": "<=1",
+        "result": "na",
+        "weight": 0
+       },
+       {
+        "name": "value_trap_guard",
+        "value": 37137000000,
+        "threshold": "cheap requires FCF>0",
+        "result": "na",
+        "weight": 0.1,
+        "note": "not in the value cell — interaction n/a"
+       },
+       {
+        "name": "debt_to_equity",
+        "value": 1.496,
+        "threshold": "<0.33",
+        "result": "fail",
+        "weight": 0.2,
+        "note": "REJECT: D/E > 0.8"
+       },
+       {
+        "name": "inventory_vs_sales",
+        "value": "8.6% vs 2.5%",
+        "threshold": "inv% <= rev%",
+        "result": "fail",
+        "weight": 0.05
+       },
+       {
+        "name": "growth_consistency",
+        "value": "1/4 yrs +",
+        "threshold": ">=3 yrs",
+        "result": "fail",
+        "weight": 0
+       },
+       {
+        "name": "roe",
+        "value": 16.2,
+        "threshold": ">=15%",
+        "result": "pass",
+        "weight": 0.05
+       },
+       {
+        "name": "fcf_positive",
+        "value": 37137000000,
+        "threshold": ">0",
+        "result": "pass",
+        "weight": 0.2
+       }
+      ],
+      "convictionScore": 0,
+      "verdict": "avoid",
+      "rationale": "slow_grower: EPS growth -6.5% ≤ 5% → avoid (score 0)",
+      "sellTriggers": [
+       "dividend-cut risk",
+       "lost yield advantage"
+      ],
+      "riskChecks": {},
+      "intendedAction": null,
+      "dataProvenance": [
+       {
+        "field": "fundamentals",
+        "source": "sec-edgar",
+        "asOf": "2025-12-31"
+       }
+      ],
+      "model": {
+       "promptVersion": "0.1",
+       "modelId": "deterministic-only",
+       "strategyConfigHash": "e14663e8f9e7fbe698d41bd0a8102930bf14f454863e0f173d8b603b26b32711"
+      },
+      "confidence": 0,
+      "abstainReason": null,
+      "disclaimers": [
+       "Past performance is not a guide to future results.",
+       "Capital at risk."
+      ]
+     },
+     "proof": [
+      "0x216e5ed21b467672d04a558cb10a206524e5941fb96dd2ffa536f889550bad33",
+      "0xfc81fa5cd1509f06e8926d0be7794b1c417ddd723d1d33b8ce6a063f740edc61",
+      "0xe64801a04da3e557b48d4da618b116a9dbe03af01097071f2fbc7714bb7d5612"
+     ]
+    }
+   ]
   }
  ]
 }

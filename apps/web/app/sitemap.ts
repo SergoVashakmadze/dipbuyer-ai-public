@@ -16,7 +16,9 @@ const PAGES: Array<[path: string, changeFrequency: "hourly" | "daily" | "weekly"
   ["/models", "weekly", 0.7],
   ["/about", "monthly", 0.7],
   ["/audit", "daily", 0.6],
+  ["/monad", "monthly", 0.6],
   ["/verify", "monthly", 0.5],
+  ["/verify/monad", "monthly", 0.5],
   ["/reports", "monthly", 0.5],
 ];
 

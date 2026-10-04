@@ -81,6 +81,7 @@ const GROUPS: Array<{ label: string; hue: string; items: Item[] }> = [
     items: [
       { href: "/audit", label: "Decision audit", hint: "Every decision with its evidence", icon: <IconShield /> },
       { href: "/verify", label: "Verify a record", hint: "Check a hash against the chain", icon: <IconLink /> },
+      { href: "/monad", label: "Provable on Monad", hint: "How decisions are anchored and checked", icon: <IconShield /> },
       { href: "/verify/monad", label: "Verify on Monad", hint: "Prove a decision against a batch root", icon: <IconLink /> },
       { href: "/reports", label: "Reports", hint: "Audit packs and governance reports", icon: <IconFile /> },
     ],

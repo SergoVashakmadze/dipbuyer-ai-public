@@ -8,7 +8,7 @@ const FEATURES = [
   { href: "/opportunities", hue: "hue-violet", icon: <IconLightbulb />, title: "Stock ideas", body: "Dip buys, Lynch bargains and quality on sale, screened daily from the engine's verdicts." },
   { href: "/stock/AAPL", hue: "hue-sky", icon: <IconChart />, title: "Stock research", body: "One company in depth: verdict, intrinsic value, the Lynch checklist, chart and financials." },
   { href: "/agent", hue: "hue-emerald", icon: <IconBot />, title: "Investing agent (demo)", body: "Demonstrates how an agent could screen the market and propose trades, sized like the backtest, for a person to approve." },
-  { href: "/verify", hue: "hue-amber", icon: <IconShield />, title: "Provable decisions", body: "Every verdict is hashed and can be anchored on Algorand, so a record can be checked later." },
+  { href: "/monad", hue: "hue-amber", icon: <IconShield />, title: "Provable on Monad", body: "Every verdict is hashed and a whole run is anchored on Monad as one root, so anyone can check a decision in their browser." },
 ];
 
 /**
@@ -121,6 +121,21 @@ export default function Home() {
           <p>The full decision, inputs and data sources are hashed, so the verdict you saw can be verified later.</p>
         </div>
       </div>
+
+      <a className="card feature hue-amber" href="/monad" style={{ display: "block", marginTop: 16 }}>
+        <span className="icon">
+          <IconShield />
+        </span>
+        <h3>Provable on Monad</h3>
+        <p>
+          The whole 2016-2025 backtest, 53,384 decisions, is anchored on Monad testnet in a single transaction. Pick any decision and
+          your browser proves it against that root, without contacting DipBuyer. See how it works, or{" "}
+          <span className="grad-text">verify one now</span>.
+        </p>
+        <span className="arrow">
+          <IconArrow width={16} height={16} />
+        </span>
+      </a>
 
       <div className="section-head">
         <h2>

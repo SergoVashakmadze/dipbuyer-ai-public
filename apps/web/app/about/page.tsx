@@ -31,7 +31,7 @@ const PRINCIPLES = [
     hue: "hue-amber",
     icon: <IconShield />,
     title: "Recorded and verifiable",
-    body: "Each decision is recorded with its inputs, checklist and data sources, then hashed. The hash can be anchored on Algorand, so a verdict you saw last year can be verified today.",
+    body: "Each decision is recorded with its inputs, checklist and data sources, then hashed. Whole runs are anchored on Monad as one Merkle root (earlier records on Algorand), so a verdict you saw last year can be verified today.",
   },
 ];
 
