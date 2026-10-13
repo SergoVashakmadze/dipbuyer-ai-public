@@ -12,10 +12,13 @@ not by one machine holding an anchoring key.
 ## Status (2026-10-02)
 - Simulation works: 5 real decisions fetched, root built, report produced (no broadcast).
 - Broadcast run done: receiver `0x79cf4f8c9dcafe4cfe21c85c494acd5e4d0c9ab6` (mock forwarder), anchored root `0x4d548a4d…3903` via tx `0xc0d62aae…badaf`; listed on /verify/monad (`scripts/export-cre-batch.mjs`).
-- Not yet done: deploy the workflow itself (needs CRE deployment access, `cre account access`) and switch the receiver to the real forwarder.
+- **Simulation is the hackathon submission (2026-10-05):** Chainlink confirmed on a call that simulation is fine for the hackathon. Deploying needs their paid plan (quoted at $600/month); not pursued. Switching the receiver to the real forwarder only matters if we ever deploy.
+- Re-run 2026-10-05 on the desktop (CLI v1.36.0, dry, no broadcast): compiled, live API fetched, `asOf 2026-10-05`: 5 decisions, root `0x6fe56f86c0c5ee759464249b6a5e99204c0fba5de511ebb2c1cee9cb1ea0e848`; binary hash `ce4936fc…28e4`. `cre whoami`: org "My Org", Deploy Access not enabled (expected).
+- Chainlink's guide: https://docs.chain.link/cre/guides/operations/simulating-workflows.
 
 ## Tooling (not in git, not on PATH)
-- `~/.cre/bin/cre` v1.35.0 (sha256 verified; v1.36.0 was inside the 24h cooling-off). `cre login` per machine.
+- `~/.cre/bin/cre` v1.36.0 on the desktop (2026-10-05; v1.35.0 on the laptop), sha256 checked against the release digest. `cre login` per machine.
+- bun: `~/.local/bun-1.4.2/bun` on the laptop, `~/.bun/bin/bun` 1.4.0 on the desktop.
 - `~/.local/bun-1.4.2/bun` (sha256 verified): the CRE compiler needs bun for TypeScript workflows.
 - `cd cre/anchor && npm ci --ignore-scripts` (own lockfile; outside the pnpm workspace).
 

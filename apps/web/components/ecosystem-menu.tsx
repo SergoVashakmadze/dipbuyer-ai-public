@@ -18,7 +18,7 @@ const ECOSYSTEM = [
   { name: "IoMarkets.tv", subtitle: "Global Financial News Television", url: "https://iomarkets.tv", icon: "📺" },
   { name: "IoMarkets.news", subtitle: "Global Online Financial News", url: "https://iomarkets.news", icon: "📰" },
   { name: "IoMarkets.tech", subtitle: "Financial Technology Solutions", url: "https://iomarkets.tech", icon: "⚙️" },
-  { name: "DipBuyer AI", subtitle: "AI Agent for Value Investing", url: "https://dipbuyer.ai", icon: "🎯", current: true },
+  { name: "DipBuyer AI™", subtitle: "AI Agent for Value Investing", url: "https://dipbuyer.ai", icon: "🎯", current: true },
   { name: "Merchants of London", subtitle: "Merchant Bank & MFO", url: "https://merchants.london", icon: "🏦" },
 ];
 

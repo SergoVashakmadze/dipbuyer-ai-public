@@ -3,6 +3,7 @@ import { TickerSearch } from "../components/research-ui";
 import { IconArrow, IconBot, IconChart, IconLightbulb, IconShield } from "../components/icons";
 import { IDEAS } from "../lib/ideas";
 import { MarketNews, MarketOverview } from "../components/tradingview";
+import { BrandName } from "../components/brand-name";
 
 const FEATURES = [
   { href: "/opportunities", hue: "hue-violet", icon: <IconLightbulb />, title: "Stock ideas", body: "Dip buys, Lynch bargains and quality on sale, screened daily from the engine's verdicts." },
@@ -30,7 +31,7 @@ export default function Home() {
         </span>
         <h1>An agent that buys great companies on the dip. And keeps the receipts.</h1>
         <p className="lead">
-          DipBuyer AI screens the market with Peter Lynch&apos;s named criteria, shows you exactly why each stock passes or fails,
+          <BrandName /> screens the market with Peter Lynch&apos;s named criteria, shows you exactly why each stock passes or fails,
           and records every decision on an audit trail you can verify.
         </p>
         <TickerSearch hero placeholder="Search a ticker, e.g. NKE" />

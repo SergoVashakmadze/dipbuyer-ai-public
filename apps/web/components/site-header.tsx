@@ -8,6 +8,7 @@ import { ThemeToggle } from "./theme";
 import { OnboardingStatus } from "./onboarding-gate";
 import { AdminLink, WatchlistBell } from "./watchlist-ui";
 import { EcosystemMenu } from "./ecosystem-menu";
+import { BrandName } from "./brand-name";
 import {
   BrandMark,
   IconBook,
@@ -83,6 +84,7 @@ const GROUPS: Array<{ label: string; hue: string; items: Item[] }> = [
       { href: "/verify", label: "Verify a record", hint: "Check a hash against the chain", icon: <IconLink /> },
       { href: "/monad", label: "Provable on Monad", hint: "How decisions are anchored and checked", icon: <IconShield /> },
       { href: "/verify/monad", label: "Verify on Monad", hint: "Prove a decision against a batch root", icon: <IconLink /> },
+      { href: "/fund", label: "Fund on Monad", hint: "Simulated any-chain payment via Aurora Intents", icon: <IconWallet /> },
       { href: "/reports", label: "Reports", hint: "Audit packs and governance reports", icon: <IconFile /> },
     ],
   },
@@ -154,7 +156,10 @@ export function SiteHeader() {
       <div className="topbar-inner">
         <a className="brand" href="/" aria-label="DipBuyer AI home">
           <BrandLogo eager />
-          DipBuyer <span className="ai">AI</span>
+          <span className="brand-name">
+            DipBuyer <span className="ai">AI</span>
+            <sup className="tm">™</sup>
+          </span>
         </a>
         <nav className="nav" aria-label="Main">
           <a href="/agent" className={path.startsWith("/agent") ? "nav-link agent-link active" : "nav-link agent-link"}>
@@ -250,7 +255,10 @@ export function SiteFooter() {
         <div>
           <a className="brand" href="/">
             <BrandLogo />
+            <span className="brand-name">
             DipBuyer <span className="ai">AI</span>
+            <sup className="tm">™</sup>
+          </span>
           </a>
           <p style={{ marginTop: 12 }}>
             A technology demonstration of an AI agent for value investing: it shows how undervalued companies can be
@@ -303,19 +311,22 @@ export function SiteFooter() {
           <span className="footer-plain">
             <IconPin /> London, United Kingdom
           </span>
+          <p className="footer-risk">
+            <b>Capital at risk.</b> <BrandName /> provides research and education, not personal recommendations. The value of
+            investments can fall as well as rise and you may get back less than you invest. Past performance, including
+            backtested performance, is not a guide to future results.
+          </p>
         </div>
       </div>
       <div className="site-footer-legal">
         <p>
-          <b>Capital at risk.</b> DipBuyer AI provides research and education, not personal recommendations. The value of
-          investments can fall as well as rise and you may get back less than you invest. Past performance, including
-          backtested performance, is not a guide to future results.
-        </p>
-        <p>
-          © {year} DipBuyer AI · Built by{" "}
+          Built with <span aria-label="love">❤️</span> by{" "}
           <a href="https://www.linkedin.com/in/sergovashakmadze/" target="_blank" rel="noopener noreferrer">
             Sergo Vashakmadze
           </a>
+        </p>
+        <p>
+          © {year} <BrandName />. All rights reserved.
         </p>
         {/* Vecteezy's free licence requires a credit in their wording, linked back to the source. */}
         <p>

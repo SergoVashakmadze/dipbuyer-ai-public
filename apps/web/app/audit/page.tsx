@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { VerdictBadge } from "../../components/decision-ui";
 import { useAuthedFetch } from "../../components/use-authed-fetch";
 import { protectPage } from "../../components/protect-page";
+import { BrandName } from "../../components/brand-name";
 
 interface StoredDecision {
   decisionId: string;
@@ -52,7 +53,7 @@ function AuditPage() {
       <h1>Audit trail</h1>
       <p className="muted">
         Every decision the agent makes is recorded immutably and can be hash-anchored on Algorand for independent
-        verification — the provable track record at the heart of DipBuyer AI.
+        verification — the provable track record at the heart of <BrandName />.
       </p>
       {error && <p style={{ color: "var(--danger)" }}>{error}</p>}
       {rows && rows.length === 0 && <p className="muted">No decisions recorded yet — run a screen on Opportunities first.</p>}

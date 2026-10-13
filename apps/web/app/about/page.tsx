@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IconArrow, IconBook, IconChart, IconLightbulb, IconShield } from "../../components/icons";
 import { FUND_URL } from "../../components/site-header";
+import { BrandName } from "../../components/brand-name";
 
 export const metadata: Metadata = {
   title: "About DipBuyer AI — a technology demonstration of an AI agent for value investing",
@@ -44,7 +45,7 @@ export default function AboutPage() {
           An AI agent for <span className="grad-text">value investing</span>
         </h1>
         <p>
-          DipBuyer AI is a technology demonstration. It looks for good companies trading below what they are worth, using
+          <BrandName /> is a technology demonstration. It looks for good companies trading below what they are worth, using
           Peter Lynch&apos;s criteria, and flags the ones a portfolio holds that have become expensive. It shows its working for every decision, so you can judge the
           reasoning rather than trust a score.
         </p>
@@ -119,7 +120,7 @@ export default function AboutPage() {
       <div className="card about-cta">
         <h2 style={{ marginTop: 0 }}>Where this is going</h2>
         <p className="muted">
-          DipBuyer AI is research software today: it runs on paper, and it is candid that the strategy has not beaten a
+          <BrandName /> is research software today: it runs on paper, and it is candid that the strategy has not beaten a
           simple S&amp;P 500 tracker over the last decade. The work in progress is honest signal research, a small and
           mid-cap universe where value investing has more room, and the regulatory groundwork for advice.
         </p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { monadTestnet } from "viem/chains";
 import { IconArrow, IconChart, IconLink, IconShield } from "../../components/icons";
+import { BrandName } from "../../components/brand-name";
 
 export const metadata: Metadata = {
   title: "Provable on Monad — every DipBuyer AI decision checkable on chain",
@@ -108,7 +109,7 @@ export default function MonadPage() {
           Every decision, <span className="grad-text">checkable by anyone</span>
         </h1>
         <p>
-          A backtest or a track record is only worth something if nobody could have edited it afterwards. DipBuyer AI writes a
+          A backtest or a track record is only worth something if nobody could have edited it afterwards. <BrandName /> writes a
           fingerprint of every decision to the Monad blockchain, so you can check that a verdict existed, unchanged, under a named
           version of the rules, without taking our word for it.
         </p>
