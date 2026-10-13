@@ -109,7 +109,7 @@ export const FUND_URL = "https://www.buythedip.fund/";
 
 /** Channels the product actually runs on; the bots are the old site's, kept because they are live. */
 const SOCIALS: Array<{ href: string; label: string; icon: ReactNode }> = [
-  { href: "https://x.com/DipBuyer_AI", label: "DipBuyer AI on X", icon: <IconX /> },
+  { href: "https://x.com/SergVashakmadze", label: "Sergo Vashakmadze on X", icon: <IconX /> },
   { href: "https://www.linkedin.com/company/dipbuyer-ai/", label: "DipBuyer AI on LinkedIn", icon: <IconLinkedIn /> },
   { href: "https://t.me/DipBuyer_TradingBot", label: "DipBuyer Telegram bot", icon: <IconTelegram /> },
   { href: "https://github.com/SergoVashakmadze", label: "GitHub", icon: <IconGitHub /> },
